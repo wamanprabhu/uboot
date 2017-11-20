@@ -1,0 +1,1620 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+rt_svc_descs_indices
+                    0x80              ./build/a3700/release/bl31/runtime_svc.o
+psci_cpu_pd_nodes   0x20              ./build/a3700/release/bl31/psci_common.o
+psci_caps           0x4               ./build/a3700/release/bl31/psci_setup.o
+psci_non_cpu_pd_nodes
+                    0x20              ./build/a3700/release/bl31/psci_common.o
+psci_plat_pm_ops    0x8               ./build/a3700/release/bl31/psci_common.o
+marvell_power_domain_tree_desc
+                    0x2               ./build/a3700/release/bl31/marvell_topology.o
+percpu_data         0x80              ./build/a3700/release/bl31/cpu_data_array.o
+gicv3_driver_data   0x8               ./build/a3700/release/bl31/gicv3_main.o
+psci_spd_pm         0x8               ./build/a3700/release/bl31/psci_common.o
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/build_message.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/build_message.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/build_message.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_pm.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_pm.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_pm.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_dram_cs.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_dram_cs.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_dram_cs.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/dram_win.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/dram_win.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/dram_win.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/io_addr_dec.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/io_addr_dec.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/io_addr_dec.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_plat_config.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_plat_config.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_plat_config.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_bl31_setup.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_bl31_setup.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_bl31_setup.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/sys_info.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/sys_info.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/sys_info.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_gicv3.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_gicv3.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_gicv3.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/gic_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/gic_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_read_icenabler
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_read_ispendr
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_read_icpendr
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_read_icactiver
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_read_ipriorityr
+                0x0000000000000000       0x10 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_read_nsacr
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_write_ispendr
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_write_icpendr
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_write_nsacr
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_get_igroupr
+                0x0000000000000000       0x20 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_set_igroupr
+                0x0000000000000000       0x30 ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_set_icenabler
+                0x0000000000000000        0xc ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_set_ispendr
+                0x0000000000000000        0xc ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_set_icpendr
+                0x0000000000000000        0xc ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_set_isactiver
+                0x0000000000000000        0xc ./build/a3700/release/bl31/gic_common.o
+ .text.gicd_set_icactiver
+                0x0000000000000000        0xc ./build/a3700/release/bl31/gic_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/gicv3_main.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/gicv3_main.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/gicv3_main.o
+ .text.gicv3_rdistif_off
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/gicv3_main.o
+ .text.gicv3_get_pending_interrupt_id
+                0x0000000000000000       0x20 ./build/a3700/release/bl31/gicv3_main.o
+ .text.gicv3_get_interrupt_type
+                0x0000000000000000       0xa4 ./build/a3700/release/bl31/gicv3_main.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/gicv3_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/gicv3_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/gicv3_helpers.o
+ .text.gicd_get_igrpmodr
+                0x0000000000000000       0x20 ./build/a3700/release/bl31/gicv3_helpers.o
+ .text.gicr_read_ipriorityr
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gicv3_helpers.o
+ .text.gicr_get_igroupr0
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gicv3_helpers.o
+ .text.gicr_set_igroupr0
+                0x0000000000000000       0x1c ./build/a3700/release/bl31/gicv3_helpers.o
+ .text.gicr_get_igrpmodr0
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/gicv3_helpers.o
+ .text.gicr_set_ipriorityr
+                0x0000000000000000       0x18 ./build/a3700/release/bl31/gicv3_helpers.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_gicv3.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_gicv3.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_gicv3.o
+ .text.plat_ic_get_pending_interrupt_id
+                0x0000000000000000       0x20 ./build/a3700/release/bl31/plat_gicv3.o
+ .text.plat_ic_acknowledge_interrupt
+                0x0000000000000000        0xc ./build/a3700/release/bl31/plat_gicv3.o
+ .text.plat_ic_get_interrupt_type
+                0x0000000000000000       0x28 ./build/a3700/release/bl31/plat_gicv3.o
+ .text.plat_ic_end_of_interrupt
+                0x0000000000000000        0xc ./build/a3700/release/bl31/plat_gicv3.o
+ .text.plat_interrupt_type_to_line
+                0x0000000000000000       0x30 ./build/a3700/release/bl31/plat_gicv3.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/cci.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/cci.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/cci.o
+ .text.cci_disable_snoop_dvm_reqs
+                0x0000000000000000       0x34 ./build/a3700/release/bl31/cci.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/pm_src.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/pm_src.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/pm_src.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_bl31_setup.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_bl31_setup.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_bl31_setup.o
+ .text.bl31_plat_arch_setup
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/marvell_bl31_setup.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_pm.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_pm.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_pm.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_topology.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_topology.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_topology.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_psci_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_psci_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_psci_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_delay_timer.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_delay_timer.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_delay_timer.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/delay_timer.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/delay_timer.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/delay_timer.o
+ .text.timer_value_get
+                0x0000000000000000       0x3c ./build/a3700/release/bl31/delay_timer.o
+ .text.timer_value_ms_get
+                0x0000000000000000       0x1c ./build/a3700/release/bl31/delay_timer.o
+ .text.udelay   0x0000000000000000       0x64 ./build/a3700/release/bl31/delay_timer.o
+ .text.mdelay   0x0000000000000000        0xc ./build/a3700/release/bl31/delay_timer.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_main.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_main.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_main.o
+ .text.bl31_lib_init
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/bl31_main.o
+ .text.bl31_set_next_image_type
+                0x0000000000000000        0xc ./build/a3700/release/bl31/bl31_main.o
+ .text.bl31_get_next_image_type
+                0x0000000000000000        0xc ./build/a3700/release/bl31/bl31_main.o
+ .text.bl31_register_bl32_init
+                0x0000000000000000        0xc ./build/a3700/release/bl31/bl31_main.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/interrupt_mgmt.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/interrupt_mgmt.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/interrupt_mgmt.o
+ .text.set_scr_el3_from_rm
+                0x0000000000000000       0x84 ./build/a3700/release/bl31/interrupt_mgmt.o
+ .text.set_routing_model
+                0x0000000000000000       0x84 ./build/a3700/release/bl31/interrupt_mgmt.o
+ .text.disable_intr_rm_local
+                0x0000000000000000       0x34 ./build/a3700/release/bl31/interrupt_mgmt.o
+ .text.enable_intr_rm_local
+                0x0000000000000000       0x58 ./build/a3700/release/bl31/interrupt_mgmt.o
+ .text.register_interrupt_type_handler
+                0x0000000000000000       0x7c ./build/a3700/release/bl31/interrupt_mgmt.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_context_mgmt.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_context_mgmt.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_context_mgmt.o
+ .text.cm_set_context
+                0x0000000000000000        0xc ./build/a3700/release/bl31/bl31_context_mgmt.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/runtime_svc.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/runtime_svc.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/runtime_svc.o
+ .text.handle_runtime_svc
+                0x0000000000000000       0x74 ./build/a3700/release/bl31/runtime_svc.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/std_svc_setup.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/std_svc_setup.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/std_svc_setup.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/cpu_data_array.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/cpu_data_array.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/cpu_data_array.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/context_mgmt.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/context_mgmt.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/context_mgmt.o
+ .text.cm_el1_sysregs_context_save
+                0x0000000000000000       0x18 ./build/a3700/release/bl31/context_mgmt.o
+ .text.cm_el1_sysregs_context_restore
+                0x0000000000000000       0x18 ./build/a3700/release/bl31/context_mgmt.o
+ .text.cm_set_elr_el3
+                0x0000000000000000       0x24 ./build/a3700/release/bl31/context_mgmt.o
+ .text.cm_set_elr_spsr_el3
+                0x0000000000000000       0x28 ./build/a3700/release/bl31/context_mgmt.o
+ .text.cm_write_scr_el3_bit
+                0x0000000000000000       0x40 ./build/a3700/release/bl31/context_mgmt.o
+ .text.cm_get_scr_el3
+                0x0000000000000000       0x18 ./build/a3700/release/bl31/context_mgmt.o
+ .text.cm_set_next_eret_context
+                0x0000000000000000       0x20 ./build/a3700/release/bl31/context_mgmt.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_off.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_off.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_off.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_on.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_on.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_on.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_suspend.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_suspend.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_suspend.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_common.o
+ .text.psci_validate_suspend_req
+                0x0000000000000000       0xa4 ./build/a3700/release/bl31/psci_common.o
+ .text.psci_register_spd_pm_hook
+                0x0000000000000000       0x3c ./build/a3700/release/bl31/psci_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_main.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_main.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_main.o
+ .text.psci_version
+                0x0000000000000000        0x8 ./build/a3700/release/bl31/psci_main.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_setup.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_setup.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_setup.o
+ .text.psci_prepare_next_non_secure_ctx
+                0x0000000000000000       0x18 ./build/a3700/release/bl31/psci_setup.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_system_off.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_system_off.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_system_off.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/bakery_lock_normal.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/bakery_lock_normal.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/bakery_lock_normal.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/bl_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/bl_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/bl_common.o
+ .text.page_align
+                0x0000000000000000       0x1c ./build/a3700/release/bl31/bl_common.o
+ .text.reserve_mem
+                0x0000000000000000       0x48 ./build/a3700/release/bl31/bl_common.o
+ .text.image_size
+                0x0000000000000000       0x60 ./build/a3700/release/bl31/bl_common.o
+ .text.load_image
+                0x0000000000000000      0x130 ./build/a3700/release/bl31/bl_common.o
+ .text.load_auth_image
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/bl_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/tf_printf.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/tf_printf.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/tf_printf.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/abort.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/abort.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/abort.o
+ .text.abort    0x0000000000000000       0x18 ./build/a3700/release/bl31/abort.o
+ .rodata.str1.1
+                0x0000000000000000       0x10 ./build/a3700/release/bl31/abort.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl31/abort.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/abort.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/assert.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/assert.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/assert.o
+ .text.__assert
+                0x0000000000000000       0x1c ./build/a3700/release/bl31/assert.o
+ .rodata.str1.1
+                0x0000000000000000       0x16 ./build/a3700/release/bl31/assert.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl31/assert.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/assert.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/exit.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/exit.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/exit.o
+ .text.exit     0x0000000000000000       0x18 ./build/a3700/release/bl31/exit.o
+ .rodata.str1.1
+                0x0000000000000000        0xf ./build/a3700/release/bl31/exit.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl31/exit.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/exit.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/mem.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/mem.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/mem.o
+ .text.memcmp   0x0000000000000000       0x34 ./build/a3700/release/bl31/mem.o
+ .text.memchr   0x0000000000000000       0x28 ./build/a3700/release/bl31/mem.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/printf.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/printf.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/printf.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/putchar.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/putchar.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/putchar.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/puts.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/puts.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/puts.o
+ .text.puts     0x0000000000000000       0x60 ./build/a3700/release/bl31/puts.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl31/puts.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/puts.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/sscanf.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/sscanf.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/sscanf.o
+ .text.sscanf   0x0000000000000000       0x34 ./build/a3700/release/bl31/sscanf.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl31/sscanf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/sscanf.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/strchr.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/strchr.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/strchr.o
+ .text.strchr   0x0000000000000000       0x24 ./build/a3700/release/bl31/strchr.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl31/strchr.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/strchr.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/strcmp.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/strcmp.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/strcmp.o
+ .text.strcmp   0x0000000000000000       0x2c ./build/a3700/release/bl31/strcmp.o
+ .text.strcasecmp
+                0x0000000000000000       0x74 ./build/a3700/release/bl31/strcmp.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl31/strcmp.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/strcmp.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/strlen.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/strlen.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/strlen.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/strncmp.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/strncmp.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/strncmp.o
+ .text.strncmp  0x0000000000000000       0x38 ./build/a3700/release/bl31/strncmp.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl31/strncmp.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/strncmp.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/subr_prf.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/subr_prf.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/subr_prf.o
+ .text.sprintf  0x0000000000000000       0x70 ./build/a3700/release/bl31/subr_prf.o
+ .text.vsprintf
+                0x0000000000000000       0x4c ./build/a3700/release/bl31/subr_prf.o
+ .text.snprintf
+                0x0000000000000000       0x50 ./build/a3700/release/bl31/subr_prf.o
+ .text.vsnrprintf
+                0x0000000000000000       0x60 ./build/a3700/release/bl31/subr_prf.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_cci.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_cci.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_cci.o
+ .text.plat_marvell_interconnect_exit_coherency
+                0x0000000000000000        0xc ./build/a3700/release/bl31/marvell_cci.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/xlat_tables_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/xlat_tables_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/xlat_tables_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/xlat_tables.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/xlat_tables.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/xlat_tables.o
+ .text.enable_mmu_el1
+                0x0000000000000000       0x68 ./build/a3700/release/bl31/xlat_tables.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_common.o
+ .text.plat_get_ns_image_entrypoint
+                0x0000000000000000        0x8 ./build/a3700/release/bl31/marvell_common.o
+ .text.marvell_get_spsr_for_bl32_entry
+                0x0000000000000000        0x8 ./build/a3700/release/bl31/marvell_common.o
+ .text.marvell_get_spsr_for_bl33_entry
+                0x0000000000000000       0x20 ./build/a3700/release/bl31/marvell_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_common.o
+ .text.bl32_plat_enable_mmu
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/plat_common.o
+ .text.bl31_plat_runtime_setup
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/plat_common.o
+ .text.platform_core_pos_helper
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/plat_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/cortex_a53.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/cortex_a53.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/cortex_a53.o
+ .rodata.gic_reg_name
+                0x0000000000000000       0x93 ./build/a3700/release/bl31/cortex_a53.o
+ .rodata.cci_reg_name
+                0x0000000000000000       0x31 ./build/a3700/release/bl31/cortex_a53.o
+ .text.errata_a53_826319_wa
+                0x0000000000000000       0x20 ./build/a3700/release/bl31/cortex_a53.o
+ .rodata.cortex_a53_regs
+                0x0000000000000000       0x29 ./build/a3700/release/bl31/cortex_a53.o
+ .text.cortex_a53_cpu_reg_dump
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/cortex_a53.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_helpers.o
+ .text.plat_secondary_cold_boot_setup
+                0x0000000000000000        0x8 ./build/a3700/release/bl31/plat_helpers.o
+ .text.plat_get_my_entrypoint
+                0x0000000000000000       0x30 ./build/a3700/release/bl31/plat_helpers.o
+ .text.plat_is_my_cpu_primary
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/plat_helpers.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/platform_mp_stack.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/platform_mp_stack.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/platform_mp_stack.o
+ .text.deprecatedplatform_get_stack
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/platform_mp_stack.o
+ .text.deprecatedplatform_set_stack
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/platform_mp_stack.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_entrypoint.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_entrypoint.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_entrypoint.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/runtime_exceptions.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/runtime_exceptions.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/runtime_exceptions.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/crash_reporting.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/crash_reporting.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/crash_reporting.o
+ .rodata.gic_reg_name
+                0x0000000000000000       0x93 ./build/a3700/release/bl31/crash_reporting.o
+ .rodata.cci_reg_name
+                0x0000000000000000       0x31 ./build/a3700/release/bl31/crash_reporting.o
+ .text.crash_panic
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/crash_reporting.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/cpu_data.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/cpu_data.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/cpu_data.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/cpu_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/cpu_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/cpu_helpers.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/spinlock.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/spinlock.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/spinlock.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_helpers.o
+ .text.deprecatedpsci_entrypoint
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/psci_helpers.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/context.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/context.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/context.o
+ .text.el1_sysregs_context_save
+                0x0000000000000000       0xb4 ./build/a3700/release/bl31/context.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/debug.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/debug.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/debug.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/cache_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/cache_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/cache_helpers.o
+ .text.dcsw_op_louis
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/cache_helpers.o
+ .text.dcsw_op_all
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/cache_helpers.o
+ .text.dcsw_op_level3
+                0x0000000000000000       0x10 ./build/a3700/release/bl31/cache_helpers.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/misc_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/misc_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/misc_helpers.o
+ .text.get_afflvl_shift
+                0x0000000000000000       0x14 ./build/a3700/release/bl31/misc_helpers.o
+ .text.mpidr_mask_lower_afflvls
+                0x0000000000000000       0x1c ./build/a3700/release/bl31/misc_helpers.o
+ .text.eret     0x0000000000000000        0x4 ./build/a3700/release/bl31/misc_helpers.o
+ .text.smc      0x0000000000000000        0x4 ./build/a3700/release/bl31/misc_helpers.o
+ .text.memcpy16
+                0x0000000000000000       0x30 ./build/a3700/release/bl31/misc_helpers.o
+ .text.disable_mmu_el3
+                0x0000000000000000       0x1c ./build/a3700/release/bl31/misc_helpers.o
+ .text.disable_mmu_icache_el3
+                0x0000000000000000        0x8 ./build/a3700/release/bl31/misc_helpers.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/platform_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/platform_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/platform_helpers.o
+ .text.deprecatedplatform_get_core_pos
+                0x0000000000000000       0x18 ./build/a3700/release/bl31/platform_helpers.o
+ .text.plat_report_exception
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/platform_helpers.o
+ .text.plat_crash_console_init
+                0x0000000000000000        0x8 ./build/a3700/release/bl31/platform_helpers.o
+ .text.plat_crash_console_putc
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/platform_helpers.o
+ .text.bl1_plat_prepare_exit
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/platform_helpers.o
+ .text.plat_error_handler
+                0x0000000000000000        0x8 ./build/a3700/release/bl31/platform_helpers.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/console.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/console.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/console.o
+ .text.console_uninit
+                0x0000000000000000       0x10 ./build/a3700/release/bl31/console.o
+ .text.console_getc
+                0x0000000000000000        0xc ./build/a3700/release/bl31/console.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_console.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_console.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_console.o
+ .text.console_core_getc
+                0x0000000000000000        0xc ./build/a3700/release/bl31/a3700_console.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_helpers.o
+ .text.platform_mem_init
+                0x0000000000000000        0x4 ./build/a3700/release/bl31/marvell_helpers.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000004023000 0x000000000001d000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000004023000                . = 0x4023000
+                0x0000000000000001                ASSERT ((. == ALIGN (0x1000)), BL31_BASE address is not aligned on a page boundary.)
+
+ro              0x0000000004023000     0x7000
+                0x0000000004023000                __RO_START__ = .
+ *bl31_entrypoint.o(.text*)
+ .text.bl31_entrypoint
+                0x0000000004023000       0xc0 ./build/a3700/release/bl31/bl31_entrypoint.o
+                0x0000000004023000                bl31_entrypoint
+ .text.bl31_warm_entrypoint
+                0x00000000040230c0       0x60 ./build/a3700/release/bl31/bl31_entrypoint.o
+                0x00000000040230c0                bl31_warm_entrypoint
+ *(.text*)
+ .text.a3700_pm_ack_irq
+                0x0000000004023120       0x90 ./build/a3700/release/bl31/plat_pm.o
+ .text.a3700_pwr_domain_on
+                0x00000000040231b0       0x3c ./build/a3700/release/bl31/plat_pm.o
+                0x00000000040231b0                a3700_pwr_domain_on
+ .text.a3700_validate_ns_entrypoint
+                0x00000000040231ec        0x8 ./build/a3700/release/bl31/plat_pm.o
+                0x00000000040231ec                a3700_validate_ns_entrypoint
+ .text.a3700_get_sys_suspend_power_state
+                0x00000000040231f4       0x10 ./build/a3700/release/bl31/plat_pm.o
+                0x00000000040231f4                a3700_get_sys_suspend_power_state
+ .text.a3700_validate_power_state
+                0x0000000004023204       0x18 ./build/a3700/release/bl31/plat_pm.o
+                0x0000000004023204                a3700_validate_power_state
+ .text.a3700_cpu_standby
+                0x000000000402321c       0x18 ./build/a3700/release/bl31/plat_pm.o
+                0x000000000402321c                a3700_cpu_standby
+ .text.a3700_system_off
+                0x0000000004023234       0x18 ./build/a3700/release/bl31/plat_pm.o
+ .text.a3700_pwr_domain_off
+                0x000000000402324c       0x44 ./build/a3700/release/bl31/plat_pm.o
+                0x000000000402324c                a3700_pwr_domain_off
+ .text.a3700_pwr_domain_suspend
+                0x0000000004023290      0x2ec ./build/a3700/release/bl31/plat_pm.o
+                0x0000000004023290                a3700_pwr_domain_suspend
+ .text.a3700_pwr_domain_on_finish
+                0x000000000402357c       0x30 ./build/a3700/release/bl31/plat_pm.o
+                0x000000000402357c                a3700_pwr_domain_on_finish
+ .text.a3700_pwr_domain_suspend_finish
+                0x00000000040235ac       0x84 ./build/a3700/release/bl31/plat_pm.o
+                0x00000000040235ac                a3700_pwr_domain_suspend_finish
+ .text.a3700_system_reset
+                0x0000000004023630       0x34 ./build/a3700/release/bl31/plat_pm.o
+ .text.a3700_pm_en_nb_gpio
+                0x0000000004023664       0x88 ./build/a3700/release/bl31/plat_pm.o
+ .text.a3700_pm_src_gpio
+                0x00000000040236ec       0x90 ./build/a3700/release/bl31/plat_pm.o
+                0x00000000040236ec                a3700_pm_src_gpio
+ .text.a3700_pm_src_uart1
+                0x000000000402377c       0x50 ./build/a3700/release/bl31/plat_pm.o
+                0x000000000402377c                a3700_pm_src_uart1
+ .text.a3700_pm_src_uart0
+                0x00000000040237cc       0x38 ./build/a3700/release/bl31/plat_pm.o
+                0x00000000040237cc                a3700_pm_src_uart0
+ .text.psci_arch_init
+                0x0000000004023804        0x4 ./build/a3700/release/bl31/plat_pm.o
+                0x0000000004023804                psci_arch_init
+ .text.marvell_get_dram_cs_base_size
+                0x0000000004023808       0xac ./build/a3700/release/bl31/a3700_dram_cs.o
+                0x0000000004023808                marvell_get_dram_cs_base_size
+ .text.dram_win_map_build
+                0x00000000040238b4       0x98 ./build/a3700/release/bl31/dram_win.o
+                0x00000000040238b4                dram_win_map_build
+ .text.cpu_wins_init
+                0x000000000402394c       0xe4 ./build/a3700/release/bl31/dram_win.o
+                0x000000000402394c                cpu_wins_init
+ .text.set_io_addr_dec_win
+                0x0000000004023a30       0x90 ./build/a3700/release/bl31/io_addr_dec.o
+ .text.init_io_addr_dec
+                0x0000000004023ac0      0x100 ./build/a3700/release/bl31/io_addr_dec.o
+                0x0000000004023ac0                init_io_addr_dec
+ .text.marvell_get_io_dec_win_conf
+                0x0000000004023bc0       0x1c ./build/a3700/release/bl31/marvell_plat_config.o
+                0x0000000004023bc0                marvell_get_io_dec_win_conf
+ .text.bl31_plat_arch_setup
+                0x0000000004023bdc       0xd8 ./build/a3700/release/bl31/plat_bl31_setup.o
+                0x0000000004023bdc                bl31_plat_arch_setup
+ .text.set_info
+                0x0000000004023cb4       0x40 ./build/a3700/release/bl31/sys_info.o
+                0x0000000004023cb4                set_info
+ .text.plat_marvell_gic_driver_init
+                0x0000000004023cf4        0xc ./build/a3700/release/bl31/marvell_gicv3.o
+                0x0000000004023cf4                plat_marvell_gic_driver_init
+ .text.plat_marvell_gic_init
+                0x0000000004023d00       0x20 ./build/a3700/release/bl31/marvell_gicv3.o
+                0x0000000004023d00                plat_marvell_gic_init
+ .text.plat_marvell_gic_cpuif_enable
+                0x0000000004023d20       0x14 ./build/a3700/release/bl31/marvell_gicv3.o
+                0x0000000004023d20                plat_marvell_gic_cpuif_enable
+ .text.plat_marvell_gic_cpuif_disable
+                0x0000000004023d34       0x14 ./build/a3700/release/bl31/marvell_gicv3.o
+                0x0000000004023d34                plat_marvell_gic_cpuif_disable
+ .text.plat_marvell_gic_pcpu_init
+                0x0000000004023d48       0x14 ./build/a3700/release/bl31/marvell_gicv3.o
+                0x0000000004023d48                plat_marvell_gic_pcpu_init
+ .text.plat_marvell_gic_irq_save
+                0x0000000004023d5c        0x8 ./build/a3700/release/bl31/marvell_gicv3.o
+                0x0000000004023d5c                plat_marvell_gic_irq_save
+ .text.plat_marvell_gic_irq_restore
+                0x0000000004023d64        0x8 ./build/a3700/release/bl31/marvell_gicv3.o
+                0x0000000004023d64                plat_marvell_gic_irq_restore
+ .text.plat_marvell_gic_irq_pcpu_save
+                0x0000000004023d6c       0x34 ./build/a3700/release/bl31/marvell_gicv3.o
+                0x0000000004023d6c                plat_marvell_gic_irq_pcpu_save
+ .text.plat_marvell_gic_irq_pcpu_restore
+                0x0000000004023da0       0x34 ./build/a3700/release/bl31/marvell_gicv3.o
+                0x0000000004023da0                plat_marvell_gic_irq_pcpu_restore
+ .text.gicd_read_igroupr
+                0x0000000004023dd4       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023dd4                gicd_read_igroupr
+ .text.gicd_read_isenabler
+                0x0000000004023de8       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023de8                gicd_read_isenabler
+ .text.gicd_read_isactiver
+                0x0000000004023dfc       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023dfc                gicd_read_isactiver
+ .text.gicd_read_itargetsr
+                0x0000000004023e10       0x10 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023e10                gicd_read_itargetsr
+ .text.gicd_read_icfgr
+                0x0000000004023e20       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023e20                gicd_read_icfgr
+ .text.gicd_write_igroupr
+                0x0000000004023e34       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023e34                gicd_write_igroupr
+ .text.gicd_write_isenabler
+                0x0000000004023e48       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023e48                gicd_write_isenabler
+ .text.gicd_write_icenabler
+                0x0000000004023e5c       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023e5c                gicd_write_icenabler
+ .text.gicd_write_isactiver
+                0x0000000004023e70       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023e70                gicd_write_isactiver
+ .text.gicd_write_icactiver
+                0x0000000004023e84       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023e84                gicd_write_icactiver
+ .text.gicd_write_ipriorityr
+                0x0000000004023e98       0x10 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023e98                gicd_write_ipriorityr
+ .text.gicd_write_itargetsr
+                0x0000000004023ea8       0x10 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023ea8                gicd_write_itargetsr
+ .text.gicd_write_icfgr
+                0x0000000004023eb8       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023eb8                gicd_write_icfgr
+ .text.gicd_clr_igroupr
+                0x0000000004023ecc       0x30 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023ecc                gicd_clr_igroupr
+ .text.gicd_set_isenabler
+                0x0000000004023efc        0xc ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023efc                gicd_set_isenabler
+ .text.gicd_set_ipriorityr
+                0x0000000004023f08       0x14 ./build/a3700/release/bl31/gic_common.o
+                0x0000000004023f08                gicd_set_ipriorityr
+ .text.gicv3_driver_init
+                0x0000000004023f1c       0x44 ./build/a3700/release/bl31/gicv3_main.o
+                0x0000000004023f1c                gicv3_driver_init
+ .text.gicv3_distif_init
+                0x0000000004023f60       0xb0 ./build/a3700/release/bl31/gicv3_main.o
+                0x0000000004023f60                gicv3_distif_init
+ .text.gicv3_rdistif_on
+                0x0000000004024010        0x4 ./build/a3700/release/bl31/gicv3_main.o
+                0x0000000004024010                gicv3_rdistif_on
+ .text.gicv3_rdistif_init
+                0x0000000004024014       0x78 ./build/a3700/release/bl31/gicv3_main.o
+                0x0000000004024014                gicv3_rdistif_init
+ .text.gicv3_cpuif_enable
+                0x000000000402408c       0x84 ./build/a3700/release/bl31/gicv3_main.o
+                0x000000000402408c                gicv3_cpuif_enable
+ .text.gicv3_cpuif_disable
+                0x0000000004024110       0x3c ./build/a3700/release/bl31/gicv3_main.o
+                0x0000000004024110                gicv3_cpuif_disable
+ .text.gicv3_get_pending_interrupt_type
+                0x000000000402414c        0xc ./build/a3700/release/bl31/gicv3_main.o
+                0x000000000402414c                gicv3_get_pending_interrupt_type
+ .text.gicv3_irq_save
+                0x0000000004024158       0xf8 ./build/a3700/release/bl31/gicv3_main.o
+                0x0000000004024158                gicv3_irq_save
+ .text.gicv3_irq_restore
+                0x0000000004024250      0x13c ./build/a3700/release/bl31/gicv3_main.o
+                0x0000000004024250                gicv3_irq_restore
+ .text.gicv3_irq_pcpu_save
+                0x000000000402438c       0x3c ./build/a3700/release/bl31/gicv3_main.o
+                0x000000000402438c                gicv3_irq_pcpu_save
+ .text.gicv3_irq_pcpu_restore
+                0x00000000040243c8       0x60 ./build/a3700/release/bl31/gicv3_main.o
+                0x00000000040243c8                gicv3_irq_pcpu_restore
+ .text.gicd_read_igrpmodr
+                0x0000000004024428       0x14 ./build/a3700/release/bl31/gicv3_helpers.o
+                0x0000000004024428                gicd_read_igrpmodr
+ .text.gicd_write_igrpmodr
+                0x000000000402443c       0x14 ./build/a3700/release/bl31/gicv3_helpers.o
+                0x000000000402443c                gicd_write_igrpmodr
+ .text.gicd_set_igrpmodr
+                0x0000000004024450       0x30 ./build/a3700/release/bl31/gicv3_helpers.o
+                0x0000000004024450                gicd_set_igrpmodr
+ .text.gicd_clr_igrpmodr
+                0x0000000004024480       0x30 ./build/a3700/release/bl31/gicv3_helpers.o
+                0x0000000004024480                gicd_clr_igrpmodr
+ .text.gicr_write_ipriorityr
+                0x00000000040244b0       0x14 ./build/a3700/release/bl31/gicv3_helpers.o
+                0x00000000040244b0                gicr_write_ipriorityr
+ .text.gicr_clr_igroupr0
+                0x00000000040244c4       0x1c ./build/a3700/release/bl31/gicv3_helpers.o
+                0x00000000040244c4                gicr_clr_igroupr0
+ .text.gicr_set_igrpmodr0
+                0x00000000040244e0       0x1c ./build/a3700/release/bl31/gicv3_helpers.o
+                0x00000000040244e0                gicr_set_igrpmodr0
+ .text.gicr_clr_igrpmodr0
+                0x00000000040244fc       0x1c ./build/a3700/release/bl31/gicv3_helpers.o
+                0x00000000040244fc                gicr_clr_igrpmodr0
+ .text.gicr_set_isenabler0
+                0x0000000004024518       0x14 ./build/a3700/release/bl31/gicv3_helpers.o
+                0x0000000004024518                gicr_set_isenabler0
+ .text.gicv3_rdistif_mark_core_awake
+                0x000000000402452c       0x1c ./build/a3700/release/bl31/gicv3_helpers.o
+                0x000000000402452c                gicv3_rdistif_mark_core_awake
+ .text.gicv3_rdistif_mark_core_asleep
+                0x0000000004024548       0x1c ./build/a3700/release/bl31/gicv3_helpers.o
+                0x0000000004024548                gicv3_rdistif_mark_core_asleep
+ .text.gicv3_rdistif_base_addrs_probe
+                0x0000000004024564       0x54 ./build/a3700/release/bl31/gicv3_helpers.o
+                0x0000000004024564                gicv3_rdistif_base_addrs_probe
+ .text.gicv3_spis_configure_defaults
+                0x00000000040245b8       0x9c ./build/a3700/release/bl31/gicv3_helpers.o
+                0x00000000040245b8                gicv3_spis_configure_defaults
+ .text.gicv3_secure_spis_configure
+                0x0000000004024654       0xb4 ./build/a3700/release/bl31/gicv3_helpers.o
+                0x0000000004024654                gicv3_secure_spis_configure
+ .text.gicv3_ppi_sgi_configure_defaults
+                0x0000000004024708       0x54 ./build/a3700/release/bl31/gicv3_helpers.o
+                0x0000000004024708                gicv3_ppi_sgi_configure_defaults
+ .text.gicv3_secure_ppi_sgi_configure
+                0x000000000402475c       0x80 ./build/a3700/release/bl31/gicv3_helpers.o
+                0x000000000402475c                gicv3_secure_ppi_sgi_configure
+ .text.plat_ic_get_pending_interrupt_type
+                0x00000000040247dc       0x30 ./build/a3700/release/bl31/plat_gicv3.o
+                0x00000000040247dc                plat_ic_get_pending_interrupt_type
+ .text.cci_init
+                0x000000000402480c       0x14 ./build/a3700/release/bl31/cci.o
+                0x000000000402480c                cci_init
+ .text.cci_enable_snoop_dvm_reqs
+                0x0000000004024820       0x34 ./build/a3700/release/bl31/cci.o
+                0x0000000004024820                cci_enable_snoop_dvm_reqs
+ .text.mv_wake_up_src_config_get
+                0x0000000004024854        0xc ./build/a3700/release/bl31/pm_src.o
+                0x0000000004024854                mv_wake_up_src_config_get
+ .text.bl31_plat_get_next_image_ep_info
+                0x0000000004024860       0x20 ./build/a3700/release/bl31/marvell_bl31_setup.o
+                0x0000000004024860                bl31_plat_get_next_image_ep_info
+ .text.marvell_bl31_early_platform_setup
+                0x0000000004024880       0x64 ./build/a3700/release/bl31/marvell_bl31_setup.o
+                0x0000000004024880                marvell_bl31_early_platform_setup
+ .text.bl31_early_platform_setup
+                0x00000000040248e4       0x18 ./build/a3700/release/bl31/marvell_bl31_setup.o
+                0x00000000040248e4                bl31_early_platform_setup
+ .text.marvell_bl31_platform_setup
+                0x00000000040248fc       0x18 ./build/a3700/release/bl31/marvell_bl31_setup.o
+                0x00000000040248fc                marvell_bl31_platform_setup
+ .text.marvell_bl31_plat_runtime_setup
+                0x0000000004024914       0x1c ./build/a3700/release/bl31/marvell_bl31_setup.o
+                0x0000000004024914                marvell_bl31_plat_runtime_setup
+ .text.bl31_platform_setup
+                0x0000000004024930        0x4 ./build/a3700/release/bl31/marvell_bl31_setup.o
+                0x0000000004024930                bl31_platform_setup
+ .text.bl31_plat_runtime_setup
+                0x0000000004024934        0x4 ./build/a3700/release/bl31/marvell_bl31_setup.o
+                0x0000000004024934                bl31_plat_runtime_setup
+ .text.marvell_bl31_plat_arch_setup
+                0x0000000004024938       0x4c ./build/a3700/release/bl31/marvell_bl31_setup.o
+                0x0000000004024938                marvell_bl31_plat_arch_setup
+ .text.plat_get_syscnt_freq2
+                0x0000000004024984        0xc ./build/a3700/release/bl31/marvell_bl31_setup.o
+                0x0000000004024984                plat_get_syscnt_freq2
+ .text.marvell_program_mailbox
+                0x0000000004024990       0x2c ./build/a3700/release/bl31/marvell_pm.o
+                0x0000000004024990                marvell_program_mailbox
+ .text.plat_setup_psci_ops
+                0x00000000040249bc       0x24 ./build/a3700/release/bl31/marvell_pm.o
+                0x00000000040249bc                plat_setup_psci_ops
+ .text.plat_get_power_domain_tree_desc
+                0x00000000040249e0       0x1c ./build/a3700/release/bl31/marvell_topology.o
+                0x00000000040249e0                plat_get_power_domain_tree_desc
+ .text.marvell_check_mpidr
+                0x00000000040249fc       0x3c ./build/a3700/release/bl31/marvell_topology.o
+                0x00000000040249fc                marvell_check_mpidr
+ .text.plat_core_pos_by_mpidr
+                0x0000000004024a38       0x2c ./build/a3700/release/bl31/marvell_topology.o
+                0x0000000004024a38                plat_core_pos_by_mpidr
+ .text.plat_get_target_pwr_state
+                0x0000000004024a64       0x2c ./build/a3700/release/bl31/plat_psci_common.o
+                0x0000000004024a64                plat_get_target_pwr_state
+ .text.plat_get_timer_value
+                0x0000000004024a90        0xc ./build/a3700/release/bl31/plat_delay_timer.o
+ .text.plat_delay_timer_init
+                0x0000000004024a9c        0xc ./build/a3700/release/bl31/plat_delay_timer.o
+                0x0000000004024a9c                plat_delay_timer_init
+ .text.timer_init
+                0x0000000004024aa8        0xc ./build/a3700/release/bl31/delay_timer.o
+                0x0000000004024aa8                timer_init
+ .text.get_arm_std_svc_args
+                0x0000000004024ab4        0xc ./build/a3700/release/bl31/bl31_main.o
+                0x0000000004024ab4                get_arm_std_svc_args
+ .text.bl31_prepare_next_image_entry
+                0x0000000004024ac0       0x5c ./build/a3700/release/bl31/bl31_main.o
+                0x0000000004024ac0                bl31_prepare_next_image_entry
+ .text.bl31_main
+                0x0000000004024b1c       0x60 ./build/a3700/release/bl31/bl31_main.o
+                0x0000000004024b1c                bl31_main
+ .text.get_scr_el3_from_routing_model
+                0x0000000004024b7c       0x30 ./build/a3700/release/bl31/interrupt_mgmt.o
+                0x0000000004024b7c                get_scr_el3_from_routing_model
+ .text.get_interrupt_type_handler
+                0x0000000004024bac       0x2c ./build/a3700/release/bl31/interrupt_mgmt.o
+                0x0000000004024bac                get_interrupt_type_handler
+ .text.cm_get_context
+                0x0000000004024bd8        0xc ./build/a3700/release/bl31/bl31_context_mgmt.o
+                0x0000000004024bd8                cm_get_context
+ .text.cm_get_context_by_index
+                0x0000000004024be4       0x24 ./build/a3700/release/bl31/bl31_context_mgmt.o
+                0x0000000004024be4                cm_get_context_by_index
+ .text.cm_set_context_by_index
+                0x0000000004024c08       0x28 ./build/a3700/release/bl31/bl31_context_mgmt.o
+                0x0000000004024c08                cm_set_context_by_index
+ .text.runtime_svc_init
+                0x0000000004024c30      0x13c ./build/a3700/release/bl31/runtime_svc.o
+                0x0000000004024c30                runtime_svc_init
+ .text.std_svc_setup
+                0x0000000004024d6c       0x18 ./build/a3700/release/bl31/std_svc_setup.o
+ .text.std_svc_smc_handler
+                0x0000000004024d84       0xa4 ./build/a3700/release/bl31/std_svc_setup.o
+                0x0000000004024d84                std_svc_smc_handler
+ .text.cm_init_context_common
+                0x0000000004024e28       0xfc ./build/a3700/release/bl31/context_mgmt.o
+ .text.cm_init  0x0000000004024f24        0x4 ./build/a3700/release/bl31/context_mgmt.o
+                0x0000000004024f24                cm_init
+ .text.cm_init_context_by_index
+                0x0000000004024f28       0x2c ./build/a3700/release/bl31/context_mgmt.o
+                0x0000000004024f28                cm_init_context_by_index
+ .text.cm_init_my_context
+                0x0000000004024f54       0x2c ./build/a3700/release/bl31/context_mgmt.o
+                0x0000000004024f54                cm_init_my_context
+ .text.cm_prepare_el3_exit
+                0x0000000004024f80       0xbc ./build/a3700/release/bl31/context_mgmt.o
+                0x0000000004024f80                cm_prepare_el3_exit
+ .text.psci_do_cpu_off
+                0x000000000402503c       0xfc ./build/a3700/release/bl31/psci_off.o
+                0x000000000402503c                psci_do_cpu_off
+ .text.psci_cpu_on_start
+                0x0000000004025138      0x144 ./build/a3700/release/bl31/psci_on.o
+                0x0000000004025138                psci_cpu_on_start
+ .text.psci_cpu_on_finish
+                0x000000000402527c       0xa0 ./build/a3700/release/bl31/psci_on.o
+                0x000000000402527c                psci_cpu_on_finish
+ .text.psci_cpu_suspend_start
+                0x000000000402531c      0x140 ./build/a3700/release/bl31/psci_suspend.o
+                0x000000000402531c                psci_cpu_suspend_start
+ .text.psci_cpu_suspend_finish
+                0x000000000402545c       0x7c ./build/a3700/release/bl31/psci_suspend.o
+                0x000000000402545c                psci_cpu_suspend_finish
+ .text.psci_validate_power_state
+                0x00000000040254d8       0x24 ./build/a3700/release/bl31/psci_common.o
+                0x00000000040254d8                psci_validate_power_state
+ .text.psci_query_sys_suspend_pwrstate
+                0x00000000040254fc       0x10 ./build/a3700/release/bl31/psci_common.o
+                0x00000000040254fc                psci_query_sys_suspend_pwrstate
+ .text.psci_is_last_on_cpu
+                0x000000000402550c       0x64 ./build/a3700/release/bl31/psci_common.o
+                0x000000000402550c                psci_is_last_on_cpu
+ .text.psci_init_req_local_pwr_states
+                0x0000000004025570       0x14 ./build/a3700/release/bl31/psci_common.o
+                0x0000000004025570                psci_init_req_local_pwr_states
+ .text.psci_get_target_local_pwr_states
+                0x0000000004025584       0xa4 ./build/a3700/release/bl31/psci_common.o
+                0x0000000004025584                psci_get_target_local_pwr_states
+ .text.psci_get_parent_pwr_domain_nodes
+                0x0000000004025628       0x48 ./build/a3700/release/bl31/psci_common.o
+                0x0000000004025628                psci_get_parent_pwr_domain_nodes
+ .text.psci_set_pwr_domains_to_run
+                0x0000000004025670       0xa4 ./build/a3700/release/bl31/psci_common.o
+                0x0000000004025670                psci_set_pwr_domains_to_run
+ .text.psci_do_state_coordination
+                0x0000000004025714      0x168 ./build/a3700/release/bl31/psci_common.o
+                0x0000000004025714                psci_do_state_coordination
+ .text.psci_find_max_off_lvl
+                0x000000000402587c       0x2c ./build/a3700/release/bl31/psci_common.o
+                0x000000000402587c                psci_find_max_off_lvl
+ .text.psci_find_target_suspend_lvl
+                0x00000000040258a8       0x24 ./build/a3700/release/bl31/psci_common.o
+                0x00000000040258a8                psci_find_target_suspend_lvl
+ .text.psci_acquire_pwr_domain_locks
+                0x00000000040258cc       0x7c ./build/a3700/release/bl31/psci_common.o
+                0x00000000040258cc                psci_acquire_pwr_domain_locks
+ .text.psci_release_pwr_domain_locks
+                0x0000000004025948       0x74 ./build/a3700/release/bl31/psci_common.o
+                0x0000000004025948                psci_release_pwr_domain_locks
+ .text.psci_validate_mpidr
+                0x00000000040259bc       0x20 ./build/a3700/release/bl31/psci_common.o
+                0x00000000040259bc                psci_validate_mpidr
+ .text.psci_validate_entry_point
+                0x00000000040259dc      0x104 ./build/a3700/release/bl31/psci_common.o
+                0x00000000040259dc                psci_validate_entry_point
+ .text.psci_warmboot_entrypoint
+                0x0000000004025ae0       0xa4 ./build/a3700/release/bl31/psci_common.o
+                0x0000000004025ae0                psci_warmboot_entrypoint
+ .text.psci_spd_migrate_info
+                0x0000000004025b84       0x20 ./build/a3700/release/bl31/psci_common.o
+                0x0000000004025b84                psci_spd_migrate_info
+ .text.psci_print_power_domain_map
+                0x0000000004025ba4        0x4 ./build/a3700/release/bl31/psci_common.o
+                0x0000000004025ba4                psci_print_power_domain_map
+ .text.psci_cpu_on
+                0x0000000004025ba8       0x5c ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025ba8                psci_cpu_on
+ .text.psci_cpu_suspend
+                0x0000000004025c04       0xe0 ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025c04                psci_cpu_suspend
+ .text.psci_system_suspend
+                0x0000000004025ce4       0x68 ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025ce4                psci_system_suspend
+ .text.psci_cpu_off
+                0x0000000004025d4c        0x8 ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025d4c                psci_cpu_off
+ .text.psci_affinity_info
+                0x0000000004025d54       0x38 ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025d54                psci_affinity_info
+ .text.psci_migrate
+                0x0000000004025d8c       0x7c ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025d8c                psci_migrate
+ .text.psci_migrate_info_type
+                0x0000000004025e08       0x18 ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025e08                psci_migrate_info_type
+ .text.psci_migrate_info_up_cpu
+                0x0000000004025e20       0x28 ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025e20                psci_migrate_info_up_cpu
+ .text.psci_node_hw_state
+                0x0000000004025e48       0x54 ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025e48                psci_node_hw_state
+ .text.psci_features
+                0x0000000004025e9c       0x54 ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025e9c                psci_features
+ .text.psci_smc_handler
+                0x0000000004025ef0      0x148 ./build/a3700/release/bl31/psci_main.o
+                0x0000000004025ef0                psci_smc_handler
+ .text.psci_arch_setup
+                0x0000000004026038       0x1c ./build/a3700/release/bl31/psci_setup.o
+                0x0000000004026038                psci_arch_setup
+ .text.psci_setup
+                0x0000000004026054      0x2a8 ./build/a3700/release/bl31/psci_setup.o
+                0x0000000004026054                psci_setup
+ .text.psci_system_off
+                0x00000000040262fc       0x34 ./build/a3700/release/bl31/psci_system_off.o
+                0x00000000040262fc                psci_system_off
+ .text.psci_system_reset
+                0x0000000004026330       0x34 ./build/a3700/release/bl31/psci_system_off.o
+                0x0000000004026330                psci_system_reset
+ .text.bakery_lock_get
+                0x0000000004026364      0x120 ./build/a3700/release/bl31/bakery_lock_normal.o
+                0x0000000004026364                bakery_lock_get
+ .text.bakery_lock_release
+                0x0000000004026484       0x54 ./build/a3700/release/bl31/bakery_lock_normal.o
+                0x0000000004026484                bakery_lock_release
+ .text.print_entry_point_info
+                0x00000000040264d8        0x4 ./build/a3700/release/bl31/bl_common.o
+                0x00000000040264d8                print_entry_point_info
+ .text.unsigned_num_print
+                0x00000000040264dc       0x74 ./build/a3700/release/bl31/tf_printf.o
+ .text.tf_printf
+                0x0000000004026550      0x304 ./build/a3700/release/bl31/tf_printf.o
+                0x0000000004026550                tf_printf
+ .text.memset   0x0000000004026854       0x1c ./build/a3700/release/bl31/mem.o
+                0x0000000004026854                memset
+ .text.memcpy   0x0000000004026870       0x20 ./build/a3700/release/bl31/mem.o
+                0x0000000004026870                memcpy
+ .text.memmove  0x0000000004026890       0x48 ./build/a3700/release/bl31/mem.o
+                0x0000000004026890                memmove
+ .text.printf   0x00000000040268d8       0x94 ./build/a3700/release/bl31/printf.o
+                0x00000000040268d8                printf
+ .text.putchar  0x000000000402696c       0x2c ./build/a3700/release/bl31/putchar.o
+                0x000000000402696c                putchar
+ .text.strlen   0x0000000004026998       0x1c ./build/a3700/release/bl31/strlen.o
+                0x0000000004026998                strlen
+ .text.snprintf_func
+                0x00000000040269b4       0x2c ./build/a3700/release/bl31/subr_prf.o
+ .text.kvprintf
+                0x00000000040269e0      0xddc ./build/a3700/release/bl31/subr_prf.o
+ .text.vsnprintf
+                0x00000000040277bc       0x5c ./build/a3700/release/bl31/subr_prf.o
+                0x00000000040277bc                vsnprintf
+ .text.plat_marvell_interconnect_init
+                0x0000000004027818       0x14 ./build/a3700/release/bl31/marvell_cci.o
+                0x0000000004027818                plat_marvell_interconnect_init
+ .text.plat_marvell_interconnect_enter_coherency
+                0x000000000402782c        0xc ./build/a3700/release/bl31/marvell_cci.o
+                0x000000000402782c                plat_marvell_interconnect_enter_coherency
+ .text.init_xlation_table_inner
+                0x0000000004027838      0x1e0 ./build/a3700/release/bl31/xlat_tables_common.o
+ .text.print_mmap
+                0x0000000004027a18        0x4 ./build/a3700/release/bl31/xlat_tables_common.o
+                0x0000000004027a18                print_mmap
+ .text.mmap_add_region
+                0x0000000004027a1c       0xdc ./build/a3700/release/bl31/xlat_tables_common.o
+                0x0000000004027a1c                mmap_add_region
+ .text.mmap_add
+                0x0000000004027af8       0x38 ./build/a3700/release/bl31/xlat_tables_common.o
+                0x0000000004027af8                mmap_add
+ .text.init_xlation_table
+                0x0000000004027b30       0x48 ./build/a3700/release/bl31/xlat_tables_common.o
+                0x0000000004027b30                init_xlation_table
+ .text.init_xlat_tables
+                0x0000000004027b78       0x74 ./build/a3700/release/bl31/xlat_tables.o
+                0x0000000004027b78                init_xlat_tables
+ .text.enable_mmu_el3
+                0x0000000004027bec       0x6c ./build/a3700/release/bl31/xlat_tables.o
+                0x0000000004027bec                enable_mmu_el3
+ .text.plat_marvell_get_mmap
+                0x0000000004027c58        0xc ./build/a3700/release/bl31/marvell_common.o
+                0x0000000004027c58                plat_marvell_get_mmap
+ .text.marvell_setup_page_tables
+                0x0000000004027c64       0x70 ./build/a3700/release/bl31/marvell_common.o
+                0x0000000004027c64                marvell_setup_page_tables
+ .text.bl31_plat_enable_mmu
+                0x0000000004027cd4        0x4 ./build/a3700/release/bl31/plat_common.o
+                0x0000000004027cd4                bl31_plat_enable_mmu
+ .text.cortex_a53_disable_dcache
+                0x0000000004027cd8       0x14 ./build/a3700/release/bl31/cortex_a53.o
+ .text.cortex_a53_disable_smp
+                0x0000000004027cec       0x18 ./build/a3700/release/bl31/cortex_a53.o
+ .text.a53_disable_non_temporal_hint
+                0x0000000004027d04       0x1c ./build/a3700/release/bl31/cortex_a53.o
+ .text.cortex_a53_reset_func
+                0x0000000004027d20       0x2c ./build/a3700/release/bl31/cortex_a53.o
+ .text.cortex_a53_core_pwr_dwn
+                0x0000000004027d4c       0x18 ./build/a3700/release/bl31/cortex_a53.o
+ .text.cortex_a53_cluster_pwr_dwn
+                0x0000000004027d64       0x24 ./build/a3700/release/bl31/cortex_a53.o
+ .text.plat_get_my_stack
+                0x0000000004027d88       0x20 ./build/a3700/release/bl31/platform_mp_stack.o
+                0x0000000004027d88                plat_get_my_stack
+ .text.plat_set_my_stack
+                0x0000000004027da8       0x10 ./build/a3700/release/bl31/platform_mp_stack.o
+                0x0000000004027da8                plat_set_my_stack
+ .text.smc_handler
+                0x0000000004027db8       0xb4 ./build/a3700/release/bl31/runtime_exceptions.o
+ .text.report_unhandled_exception
+                0x0000000004027e6c        0x4 ./build/a3700/release/bl31/crash_reporting.o
+                0x0000000004027e6c                report_unhandled_exception
+                0x0000000004027e6c                report_unhandled_interrupt
+ .text.init_cpu_data_ptr
+                0x0000000004027e70       0x14 ./build/a3700/release/bl31/cpu_data.o
+                0x0000000004027e70                init_cpu_data_ptr
+ .text._cpu_data_by_index
+                0x0000000004027e84        0xc ./build/a3700/release/bl31/cpu_data.o
+                0x0000000004027e84                _cpu_data_by_index
+ .text.reset_handler
+                0x0000000004027e90       0x20 ./build/a3700/release/bl31/cpu_helpers.o
+                0x0000000004027e90                reset_handler
+ .text.prepare_core_pwr_dwn
+                0x0000000004027eb0       0x10 ./build/a3700/release/bl31/cpu_helpers.o
+                0x0000000004027eb0                prepare_core_pwr_dwn
+ .text.prepare_cluster_pwr_dwn
+                0x0000000004027ec0       0x10 ./build/a3700/release/bl31/cpu_helpers.o
+                0x0000000004027ec0                prepare_cluster_pwr_dwn
+ .text.init_cpu_ops
+                0x0000000004027ed0       0x20 ./build/a3700/release/bl31/cpu_helpers.o
+                0x0000000004027ed0                init_cpu_ops
+ .text.get_cpu_ops_ptr
+                0x0000000004027ef0       0x3c ./build/a3700/release/bl31/cpu_helpers.o
+                0x0000000004027ef0                get_cpu_ops_ptr
+ .text.spin_lock
+                0x0000000004027f2c       0x20 ./build/a3700/release/bl31/spinlock.o
+                0x0000000004027f2c                spin_lock
+ .text.spin_unlock
+                0x0000000004027f4c        0x8 ./build/a3700/release/bl31/spinlock.o
+                0x0000000004027f4c                spin_unlock
+ .text.psci_do_pwrdown_cache_maintenance
+                0x0000000004027f54       0x4c ./build/a3700/release/bl31/psci_helpers.o
+                0x0000000004027f54                psci_do_pwrdown_cache_maintenance
+ .text.psci_do_pwrup_cache_maintenance
+                0x0000000004027fa0       0x34 ./build/a3700/release/bl31/psci_helpers.o
+                0x0000000004027fa0                psci_do_pwrup_cache_maintenance
+ .text.psci_power_down_wfi
+                0x0000000004027fd4        0xc ./build/a3700/release/bl31/psci_helpers.o
+                0x0000000004027fd4                psci_power_down_wfi
+ .text.el1_sysregs_context_restore
+                0x0000000004027fe0       0xb4 ./build/a3700/release/bl31/context.o
+                0x0000000004027fe0                el1_sysregs_context_restore
+ .text.save_gp_registers
+                0x0000000004028094       0x48 ./build/a3700/release/bl31/context.o
+                0x0000000004028094                save_gp_registers
+ .text.restore_gp_registers_eret
+                0x00000000040280dc        0xc ./build/a3700/release/bl31/context.o
+                0x00000000040280dc                restore_gp_registers_eret
+ .text.restore_gp_registers_callee_eret
+                0x00000000040280e8       0x40 ./build/a3700/release/bl31/context.o
+                0x00000000040280e8                restore_gp_registers_callee_eret
+ .text.el3_exit
+                0x0000000004028128       0x24 ./build/a3700/release/bl31/context.o
+                0x0000000004028128                el3_exit
+ .text.asm_print_str
+                0x000000000402814c       0x18 ./build/a3700/release/bl31/debug.o
+                0x000000000402814c                asm_print_str
+ .text.asm_print_hex
+                0x0000000004028164       0x30 ./build/a3700/release/bl31/debug.o
+                0x0000000004028164                asm_print_hex
+ .text.do_panic
+                0x0000000004028194       0x28 ./build/a3700/release/bl31/debug.o
+                0x0000000004028194                do_panic
+                0x0000000004028194                el3_panic
+ .text.flush_dcache_range
+                0x00000000040281bc       0x34 ./build/a3700/release/bl31/cache_helpers.o
+                0x00000000040281bc                flush_dcache_range
+ .text.clean_dcache_range
+                0x00000000040281f0       0x34 ./build/a3700/release/bl31/cache_helpers.o
+                0x00000000040281f0                clean_dcache_range
+ .text.inv_dcache_range
+                0x0000000004028224       0x34 ./build/a3700/release/bl31/cache_helpers.o
+                0x0000000004028224                inv_dcache_range
+ .text.do_dcsw_op
+                0x0000000004028258       0xdc ./build/a3700/release/bl31/cache_helpers.o
+ .text.dcsw_op_level1
+                0x0000000004028334       0x10 ./build/a3700/release/bl31/cache_helpers.o
+                0x0000000004028334                dcsw_op_level1
+ .text.dcsw_op_level2
+                0x0000000004028344       0x10 ./build/a3700/release/bl31/cache_helpers.o
+                0x0000000004028344                dcsw_op_level2
+ .text.zeromem16
+                0x0000000004028354       0x2c ./build/a3700/release/bl31/misc_helpers.o
+                0x0000000004028354                zeromem16
+ .text.plat_reset_handler
+                0x0000000004028380        0x4 ./build/a3700/release/bl31/platform_helpers.o
+                0x0000000004028380                plat_reset_handler
+ .text.plat_disable_acp
+                0x0000000004028384        0x4 ./build/a3700/release/bl31/platform_helpers.o
+                0x0000000004028384                plat_disable_acp
+ .text.plat_panic_handler
+                0x0000000004028388        0x8 ./build/a3700/release/bl31/platform_helpers.o
+                0x0000000004028388                plat_panic_handler
+ .text.console_init
+                0x0000000004028390       0x14 ./build/a3700/release/bl31/console.o
+                0x0000000004028390                console_init
+ .text.console_putc
+                0x00000000040283a4        0xc ./build/a3700/release/bl31/console.o
+                0x00000000040283a4                console_putc
+ .text.console_core_init
+                0x00000000040283b0       0x64 ./build/a3700/release/bl31/a3700_console.o
+                0x00000000040283b0                console_core_init
+ .text.console_core_putc
+                0x0000000004028414       0x44 ./build/a3700/release/bl31/a3700_console.o
+                0x0000000004028414                console_core_putc
+ .text.plat_my_core_pos
+                0x0000000004028458        0x8 ./build/a3700/release/bl31/marvell_helpers.o
+                0x0000000004028458                plat_my_core_pos
+ .text.plat_marvell_calc_core_pos
+                0x0000000004028460       0x10 ./build/a3700/release/bl31/marvell_helpers.o
+                0x0000000004028460                plat_marvell_calc_core_pos
+ .text.plat_crash_console_init
+                0x0000000004028470       0x1c ./build/a3700/release/bl31/marvell_helpers.o
+                0x0000000004028470                plat_crash_console_init
+ .text.plat_crash_console_putc
+                0x000000000402848c        0xc ./build/a3700/release/bl31/marvell_helpers.o
+                0x000000000402848c                plat_crash_console_putc
+ *(.rodata*)
+ .rodata.version_string
+                0x0000000004028498       0x28 ./build/a3700/release/bl31/build_message.o
+                0x0000000004028498                version_string
+ .rodata.build_message
+                0x00000000040284c0       0x20 ./build/a3700/release/bl31/build_message.o
+                0x00000000040284c0                build_message
+ .rodata.plat_arm_psci_pm_ops
+                0x00000000040284e0       0x78 ./build/a3700/release/bl31/plat_pm.o
+                0x00000000040284e0                plat_arm_psci_pm_ops
+ .rodata.str1.1
+                0x0000000004028558      0x10c ./build/a3700/release/bl31/plat_pm.o
+ *fill*         0x0000000004028664        0x4 
+ .rodata.dram_cs_addr_len_to_size_map
+                0x0000000004028668       0xc0 ./build/a3700/release/bl31/a3700_dram_cs.o
+ .rodata.str1.1
+                0x0000000004028728       0xa8 ./build/a3700/release/bl31/io_addr_dec.o
+ .rodata.str1.1
+                0x00000000040287d0       0x68 ./build/a3700/release/bl31/plat_bl31_setup.o
+ .rodata.g0_interrupt_array
+                0x00000000040287d0       0x20 ./build/a3700/release/bl31/marvell_gicv3.o
+ .rodata.g1s_interrupt_array
+                0x00000000040287f0        0x8 ./build/a3700/release/bl31/marvell_gicv3.o
+ .rodata.marvell_gic_data
+                0x00000000040287f8       0x40 ./build/a3700/release/bl31/marvell_gicv3.o
+                0x00000000040287f8                marvell_gic_data
+ .rodata.CSWTCH.5
+                0x0000000004028838        0x8 ./build/a3700/release/bl31/plat_gicv3.o
+ .rodata.plat_timer_ops
+                0x0000000004028840       0x10 ./build/a3700/release/bl31/plat_delay_timer.o
+ .rodata.str1.1
+                0x0000000004028850       0x6a ./build/a3700/release/bl31/bl31_main.o
+ *fill*         0x00000000040288ba        0x6 
+ .rodata.psci_args.2428
+                0x00000000040288c0       0x10 ./build/a3700/release/bl31/bl31_main.o
+ .rodata.str1.1
+                0x00000000040288d0       0x60 ./build/a3700/release/bl31/runtime_svc.o
+ .rodata.str1.1
+                0x0000000004028930        0x8 ./build/a3700/release/bl31/std_svc_setup.o
+ .rodata.arm_svc_uid
+                0x0000000004028938       0x10 ./build/a3700/release/bl31/std_svc_setup.o
+ .rodata.str1.1
+                0x0000000004028948       0x28 ./build/a3700/release/bl31/psci_common.o
+ .rodata.psci_smc_handler
+                0x0000000004028970       0x20 ./build/a3700/release/bl31/psci_main.o
+ .rodata.str1.1
+                0x0000000004028990       0x3b ./build/a3700/release/bl31/psci_main.o
+ *fill*         0x00000000040289cb        0x1 
+ .rodata.tf_printf
+                0x00000000040289cc       0x30 ./build/a3700/release/bl31/tf_printf.o
+ .rodata.str1.1
+                0x00000000040289fc        0x3 ./build/a3700/release/bl31/tf_printf.o
+ *fill*         0x00000000040289ff        0x1 
+ .rodata.kvprintf
+                0x0000000004028a00       0xb0 ./build/a3700/release/bl31/subr_prf.o
+ .rodata.hex2ascii_data
+                0x0000000004028ab0       0x28 ./build/a3700/release/bl31/subr_prf.o
+ .rodata.str1.1
+                0x0000000004028ad8       0x13 ./build/a3700/release/bl31/subr_prf.o
+ *fill*         0x0000000004028aeb        0x5 
+ .rodata.plat_marvell_mmap
+                0x0000000004028af0       0x80 ./build/a3700/release/bl31/a3700_common.o
+                0x0000000004028af0                plat_marvell_mmap
+ .rodata.cci_map
+                0x0000000004028b70        0x8 ./build/a3700/release/bl31/marvell_cci.o
+ .rodata.panic_str
+                0x0000000004028b78       0x11 ./build/a3700/release/bl31/debug.o
+                0x0000000004028b90                . = ALIGN (0x8)
+ *fill*         0x0000000004028b89        0x7 
+                0x0000000004028b90                __RT_SVC_DESCS_START__ = .
+ *(rt_svc_descs)
+ rt_svc_descs   0x0000000004028b90       0x20 ./build/a3700/release/bl31/std_svc_setup.o
+                0x0000000004028bb0                __RT_SVC_DESCS_END__ = .
+                0x0000000004028bb0                . = ALIGN (0x8)
+                0x0000000004028bb0                __CPU_OPS_START__ = .
+ *(cpu_ops)
+ cpu_ops        0x0000000004028bb0       0x20 ./build/a3700/release/bl31/cortex_a53.o
+                0x0000000004028bd0                __CPU_OPS_END__ = .
+ *(.vectors)
+ *fill*         0x0000000004028bd0      0x430 
+ .vectors       0x0000000004029000      0x800 ./build/a3700/release/bl31/runtime_exceptions.o
+                0x0000000004029000                runtime_exceptions
+                0x0000000004029800                __RO_END_UNALIGNED__ = .
+                0x000000000402a000                . = NEXT (0x1000)
+ *fill*         0x0000000004029800      0x800 
+                0x000000000402a000                __RO_END__ = .
+                0x0000000000000001                ASSERT ((__CPU_OPS_END__ > __CPU_OPS_START__), cpu_ops not defined for this platform.)
+                0x000000000402a000                __RW_START__ = .
+
+.iplt           0x000000000402a000        0x0
+ .iplt          0x000000000402a000        0x0 ./build/a3700/release/bl31/plat_pm.o
+
+.rela.dyn       0x000000000402a000        0x0
+ .rela.iplt     0x000000000402a000        0x0 ./build/a3700/release/bl31/plat_pm.o
+
+.data           0x000000000402a000      0x2a0
+                0x000000000402a000                __DATA_START__ = .
+ *(.data*)
+ .data.src_func_table
+                0x000000000402a000       0x40 ./build/a3700/release/bl31/plat_pm.o
+                0x000000000402a000                src_func_table
+ .data.mv_cpu_wins
+                0x000000000402a040      0x140 ./build/a3700/release/bl31/dram_win.o
+                0x000000000402a040                mv_cpu_wins
+ .data.io_dec_win_conf
+                0x000000000402a180       0xc8 ./build/a3700/release/bl31/marvell_plat_config.o
+                0x000000000402a180                io_dec_win_conf
+ .data.sys_info_in_ptr
+                0x000000000402a248        0x8 ./build/a3700/release/bl31/sys_info.o
+                0x000000000402a248                sys_info_in_ptr
+ .data.sys_info_size
+                0x000000000402a250        0x4 ./build/a3700/release/bl31/sys_info.o
+                0x000000000402a250                sys_info_size
+ *fill*         0x000000000402a254        0x4 
+ .data.wake_up_src_cfg
+                0x000000000402a258       0x38 ./build/a3700/release/bl31/pm_src.o
+ .data.next_image_type
+                0x000000000402a290        0x4 ./build/a3700/release/bl31/bl31_main.o
+ *fill*         0x000000000402a294        0x4 
+ .data.console_base
+                0x000000000402a298        0x8 ./build/a3700/release/bl31/console.o
+                0x000000000402a2a0                __DATA_END__ = .
+                0x0000000000000001                ASSERT ((. <= 0x403a000), BL31 progbits has exceeded its limit.)
+
+.igot.plt       0x000000000402a2a0        0x0
+ .igot.plt      0x000000000402a2a0        0x0 ./build/a3700/release/bl31/plat_pm.o
+
+stacks          0x000000000402a2c0      0x800
+                0x000000000402a2c0                __STACKS_START__ = .
+ *(tzfw_normal_stacks)
+ tzfw_normal_stacks
+                0x000000000402a2c0      0x800 ./build/a3700/release/bl31/platform_mp_stack.o
+                0x000000000402aac0                __STACKS_END__ = .
+
+.bss            0x000000000402aac0      0xf00
+                0x000000000402aac0                __BSS_START__ = .
+ *(.bss*)
+ .bss.rdistif_base_addrs
+                0x000000000402aac0       0x10 ./build/a3700/release/bl31/marvell_gicv3.o
+ .bss.spi_state
+                0x000000000402aad0      0x600 ./build/a3700/release/bl31/gicv3_main.o
+ .bss.ppi_state_arr
+                0x000000000402b0d0       0x20 ./build/a3700/release/bl31/gicv3_main.o
+ .bss.g_cci_base
+                0x000000000402b0f0        0x8 ./build/a3700/release/bl31/cci.o
+ .bss.g_cci_slave_if_map
+                0x000000000402b0f8        0x8 ./build/a3700/release/bl31/cci.o
+ .bss.bl32_image_ep_info
+                0x000000000402b100       0x58 ./build/a3700/release/bl31/marvell_bl31_setup.o
+ .bss.bl33_image_ep_info
+                0x000000000402b158       0x58 ./build/a3700/release/bl31/marvell_bl31_setup.o
+ .bss.ops       0x000000000402b1b0        0x8 ./build/a3700/release/bl31/delay_timer.o
+ .bss.bl32_init
+                0x000000000402b1b8        0x8 ./build/a3700/release/bl31/bl31_main.o
+ .bss.intr_type_descs
+                0x000000000402b1c0       0x48 ./build/a3700/release/bl31/interrupt_mgmt.o
+ .bss.rt_svc_descs
+                0x000000000402b208        0x8 ./build/a3700/release/bl31/runtime_svc.o
+ .bss.psci_req_local_pwr_states
+                0x000000000402b210        0x8 ./build/a3700/release/bl31/psci_common.o
+ *fill*         0x000000000402b218        0x8 
+ .bss.psci_ns_context
+                0x000000000402b220      0x420 ./build/a3700/release/bl31/psci_setup.o
+ .bss.mmap      0x000000000402b640      0x100 ./build/a3700/release/bl31/xlat_tables_common.o
+ .bss.xlat_max_va
+                0x000000000402b740        0x8 ./build/a3700/release/bl31/xlat_tables_common.o
+ .bss.xlat_max_pa
+                0x000000000402b748        0x8 ./build/a3700/release/bl31/xlat_tables_common.o
+ .bss.next_xlat
+                0x000000000402b750        0x4 ./build/a3700/release/bl31/xlat_tables_common.o
+ *fill*         0x000000000402b754        0x4 
+ .bss.tcr_ps_bits
+                0x000000000402b758        0x8 ./build/a3700/release/bl31/xlat_tables.o
+ .bss.base_xlation_table
+                0x000000000402b760       0x20 ./build/a3700/release/bl31/xlat_tables.o
+ *(COMMON)
+ COMMON         0x000000000402b780        0x8 ./build/a3700/release/bl31/gicv3_main.o
+                0x000000000402b780                gicv3_driver_data
+ COMMON         0x000000000402b788        0x2 ./build/a3700/release/bl31/marvell_topology.o
+                0x000000000402b788                marvell_power_domain_tree_desc
+ *fill*         0x000000000402b78a        0x6 
+ COMMON         0x000000000402b790       0x80 ./build/a3700/release/bl31/runtime_svc.o
+                0x000000000402b790                rt_svc_descs_indices
+ *fill*         0x000000000402b810       0x30 
+ COMMON         0x000000000402b840       0x80 ./build/a3700/release/bl31/cpu_data_array.o
+                0x000000000402b840                percpu_data
+ COMMON         0x000000000402b8c0       0x50 ./build/a3700/release/bl31/psci_common.o
+                0x000000000402b8c0                psci_cpu_pd_nodes
+                0x000000000402b8e0                psci_non_cpu_pd_nodes
+                0x000000000402b900                psci_plat_pm_ops
+                0x000000000402b908                psci_spd_pm
+ COMMON         0x000000000402b910        0x4 ./build/a3700/release/bl31/psci_setup.o
+                0x000000000402b910                psci_caps
+                0x000000000402b940                . = ALIGN (0x40)
+ *fill*         0x000000000402b914       0x2c 
+                0x000000000402b940                __BAKERY_LOCK_START__ = .
+ *(bakery_lock)
+ bakery_lock    0x000000000402b940        0x8 ./build/a3700/release/bl31/psci_common.o
+                0x000000000402b940                psci_locks
+                0x000000000402b980                . = ALIGN (0x40)
+ *fill*         0x000000000402b948       0x38 
+                0x0000000000000040                __PERCPU_BAKERY_LOCK_SIZE__ = ABSOLUTE ((. - __BAKERY_LOCK_START__))
+                0x000000000402b9c0                . = (. + (__PERCPU_BAKERY_LOCK_SIZE__ * 0x1))
+ *fill*         0x000000000402b980       0x40 
+                0x000000000402b9c0                __BAKERY_LOCK_END__ = .
+                0x000000000402b9c0                __BSS_END__ = .
+
+xlat_table      0x000000000402c000     0x4000
+ *(xlat_table)
+ xlat_table     0x000000000402c000     0x4000 ./build/a3700/release/bl31/xlat_tables_common.o
+                0x0000000004030000                __RW_END__ = .
+                0x0000000004030000                __BL31_END__ = .
+                0x0000000000000f00                __BSS_SIZE__ = SIZEOF (.bss)
+                0x0000000000000001                ASSERT ((. <= 0x4040000), BL31 image has exceeded its limit.)
+LOAD ./build/a3700/release/bl31/build_message.o
+LOAD ./build/a3700/release/bl31/plat_pm.o
+LOAD ./build/a3700/release/bl31/a3700_dram_cs.o
+LOAD ./build/a3700/release/bl31/dram_win.o
+LOAD ./build/a3700/release/bl31/io_addr_dec.o
+LOAD ./build/a3700/release/bl31/marvell_plat_config.o
+LOAD ./build/a3700/release/bl31/plat_bl31_setup.o
+LOAD ./build/a3700/release/bl31/sys_info.o
+LOAD ./build/a3700/release/bl31/marvell_gicv3.o
+LOAD ./build/a3700/release/bl31/gic_common.o
+LOAD ./build/a3700/release/bl31/gicv3_main.o
+LOAD ./build/a3700/release/bl31/gicv3_helpers.o
+LOAD ./build/a3700/release/bl31/plat_gicv3.o
+LOAD ./build/a3700/release/bl31/cci.o
+LOAD ./build/a3700/release/bl31/pm_src.o
+LOAD ./build/a3700/release/bl31/marvell_bl31_setup.o
+LOAD ./build/a3700/release/bl31/marvell_pm.o
+LOAD ./build/a3700/release/bl31/marvell_topology.o
+LOAD ./build/a3700/release/bl31/plat_psci_common.o
+LOAD ./build/a3700/release/bl31/plat_delay_timer.o
+LOAD ./build/a3700/release/bl31/delay_timer.o
+LOAD ./build/a3700/release/bl31/bl31_main.o
+LOAD ./build/a3700/release/bl31/interrupt_mgmt.o
+LOAD ./build/a3700/release/bl31/bl31_context_mgmt.o
+LOAD ./build/a3700/release/bl31/runtime_svc.o
+LOAD ./build/a3700/release/bl31/std_svc_setup.o
+LOAD ./build/a3700/release/bl31/cpu_data_array.o
+LOAD ./build/a3700/release/bl31/context_mgmt.o
+LOAD ./build/a3700/release/bl31/psci_off.o
+LOAD ./build/a3700/release/bl31/psci_on.o
+LOAD ./build/a3700/release/bl31/psci_suspend.o
+LOAD ./build/a3700/release/bl31/psci_common.o
+LOAD ./build/a3700/release/bl31/psci_main.o
+LOAD ./build/a3700/release/bl31/psci_setup.o
+LOAD ./build/a3700/release/bl31/psci_system_off.o
+LOAD ./build/a3700/release/bl31/bakery_lock_normal.o
+LOAD ./build/a3700/release/bl31/bl_common.o
+LOAD ./build/a3700/release/bl31/tf_printf.o
+LOAD ./build/a3700/release/bl31/abort.o
+LOAD ./build/a3700/release/bl31/assert.o
+LOAD ./build/a3700/release/bl31/exit.o
+LOAD ./build/a3700/release/bl31/mem.o
+LOAD ./build/a3700/release/bl31/printf.o
+LOAD ./build/a3700/release/bl31/putchar.o
+LOAD ./build/a3700/release/bl31/puts.o
+LOAD ./build/a3700/release/bl31/sscanf.o
+LOAD ./build/a3700/release/bl31/strchr.o
+LOAD ./build/a3700/release/bl31/strcmp.o
+LOAD ./build/a3700/release/bl31/strlen.o
+LOAD ./build/a3700/release/bl31/strncmp.o
+LOAD ./build/a3700/release/bl31/subr_prf.o
+LOAD ./build/a3700/release/bl31/a3700_common.o
+LOAD ./build/a3700/release/bl31/marvell_cci.o
+LOAD ./build/a3700/release/bl31/xlat_tables_common.o
+LOAD ./build/a3700/release/bl31/xlat_tables.o
+LOAD ./build/a3700/release/bl31/marvell_common.o
+LOAD ./build/a3700/release/bl31/plat_common.o
+LOAD ./build/a3700/release/bl31/cortex_a53.o
+LOAD ./build/a3700/release/bl31/plat_helpers.o
+LOAD ./build/a3700/release/bl31/platform_mp_stack.o
+LOAD ./build/a3700/release/bl31/bl31_entrypoint.o
+LOAD ./build/a3700/release/bl31/runtime_exceptions.o
+LOAD ./build/a3700/release/bl31/crash_reporting.o
+LOAD ./build/a3700/release/bl31/cpu_data.o
+LOAD ./build/a3700/release/bl31/cpu_helpers.o
+LOAD ./build/a3700/release/bl31/spinlock.o
+LOAD ./build/a3700/release/bl31/psci_helpers.o
+LOAD ./build/a3700/release/bl31/context.o
+LOAD ./build/a3700/release/bl31/debug.o
+LOAD ./build/a3700/release/bl31/cache_helpers.o
+LOAD ./build/a3700/release/bl31/misc_helpers.o
+LOAD ./build/a3700/release/bl31/platform_helpers.o
+LOAD ./build/a3700/release/bl31/console.o
+LOAD ./build/a3700/release/bl31/a3700_console.o
+LOAD ./build/a3700/release/bl31/marvell_helpers.o
+OUTPUT(build/a3700/release/bl31/bl31.elf elf64-littleaarch64)
+
+.comment        0x0000000000000000       0x2f
+ .comment       0x0000000000000000       0x2f ./build/a3700/release/bl31/build_message.o
+                                         0x30 (size before relaxing)
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/plat_pm.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/a3700_dram_cs.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/dram_win.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/io_addr_dec.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/marvell_plat_config.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/plat_bl31_setup.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/sys_info.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/marvell_gicv3.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/gic_common.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/gicv3_main.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/gicv3_helpers.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/plat_gicv3.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/cci.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/pm_src.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/marvell_bl31_setup.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/marvell_pm.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/marvell_topology.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/plat_psci_common.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/plat_delay_timer.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/delay_timer.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/bl31_main.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/interrupt_mgmt.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/bl31_context_mgmt.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/runtime_svc.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/std_svc_setup.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/cpu_data_array.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/context_mgmt.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/psci_off.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/psci_on.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/psci_suspend.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/psci_common.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/psci_main.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/psci_setup.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/psci_system_off.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/bakery_lock_normal.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/bl_common.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/tf_printf.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/mem.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/printf.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/putchar.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/strlen.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/subr_prf.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/a3700_common.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/marvell_cci.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/xlat_tables_common.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/xlat_tables.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/marvell_common.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl31/plat_common.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/build_message.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_pm.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_dram_cs.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/dram_win.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/io_addr_dec.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_plat_config.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_bl31_setup.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/sys_info.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_gicv3.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/gic_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/gicv3_main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/gicv3_helpers.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_gicv3.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/cci.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/pm_src.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_bl31_setup.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_pm.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_topology.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_psci_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_delay_timer.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/delay_timer.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/interrupt_mgmt.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/bl31_context_mgmt.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/runtime_svc.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/std_svc_setup.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/cpu_data_array.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/context_mgmt.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_off.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_on.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_suspend.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_setup.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/psci_system_off.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/bakery_lock_normal.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/bl_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/tf_printf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/mem.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/printf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/putchar.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/strlen.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/subr_prf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/a3700_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_cci.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/xlat_tables_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/xlat_tables.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/marvell_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl31/plat_common.o

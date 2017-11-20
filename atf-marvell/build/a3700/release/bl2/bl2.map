@@ -1,0 +1,782 @@
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/build_message.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/build_message.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/build_message.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/io_fip.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/io_fip.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/io_fip.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/io_memmap.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/io_memmap.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/io_memmap.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/io_storage.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/io_storage.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/io_storage.o
+ .text.io_write
+                0x0000000000000000       0x1c ./build/a3700/release/bl2/io_storage.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_bl2_setup.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_bl2_setup.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_bl2_setup.o
+ .text.bl2_plat_get_scp_bl2_meminfo
+                0x0000000000000000       0x20 ./build/a3700/release/bl2/marvell_bl2_setup.o
+ .text.bl2_plat_set_bl32_ep_info
+                0x0000000000000000       0x30 ./build/a3700/release/bl2/marvell_bl2_setup.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_io_storage.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_io_storage.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_io_storage.o
+ .text.marvell_io_is_toc_valid
+                0x0000000000000000       0x28 ./build/a3700/release/bl2/marvell_io_storage.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_main.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_main.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_main.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_arch_setup.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_arch_setup.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_arch_setup.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_image_load.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_image_load.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_image_load.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/bl_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/bl_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/bl_common.o
+ .text.page_align
+                0x0000000000000000       0x1c ./build/a3700/release/bl2/bl_common.o
+ .text.image_size
+                0x0000000000000000       0x60 ./build/a3700/release/bl2/bl_common.o
+ .text.print_entry_point_info
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/bl_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/tf_printf.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/tf_printf.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/tf_printf.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/abort.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/abort.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/abort.o
+ .text.abort    0x0000000000000000       0x18 ./build/a3700/release/bl2/abort.o
+ .rodata.str1.1
+                0x0000000000000000       0x10 ./build/a3700/release/bl2/abort.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/abort.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/abort.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/assert.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/assert.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/assert.o
+ .text.__assert
+                0x0000000000000000       0x1c ./build/a3700/release/bl2/assert.o
+ .rodata.str1.1
+                0x0000000000000000       0x16 ./build/a3700/release/bl2/assert.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/assert.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/assert.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/exit.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/exit.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/exit.o
+ .text.exit     0x0000000000000000       0x18 ./build/a3700/release/bl2/exit.o
+ .rodata.str1.1
+                0x0000000000000000        0xf ./build/a3700/release/bl2/exit.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/exit.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/exit.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/mem.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/mem.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/mem.o
+ .text.memchr   0x0000000000000000       0x28 ./build/a3700/release/bl2/mem.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/printf.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/printf.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/printf.o
+ .text.printf   0x0000000000000000       0x94 ./build/a3700/release/bl2/printf.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/printf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/printf.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/putchar.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/putchar.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/putchar.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/puts.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/puts.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/puts.o
+ .text.puts     0x0000000000000000       0x60 ./build/a3700/release/bl2/puts.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/puts.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/puts.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/sscanf.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/sscanf.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/sscanf.o
+ .text.sscanf   0x0000000000000000       0x34 ./build/a3700/release/bl2/sscanf.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/sscanf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/sscanf.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/strchr.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/strchr.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/strchr.o
+ .text.strchr   0x0000000000000000       0x24 ./build/a3700/release/bl2/strchr.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/strchr.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/strchr.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/strcmp.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/strcmp.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/strcmp.o
+ .text.strcmp   0x0000000000000000       0x2c ./build/a3700/release/bl2/strcmp.o
+ .text.strcasecmp
+                0x0000000000000000       0x74 ./build/a3700/release/bl2/strcmp.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/strcmp.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/strcmp.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/strlen.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/strlen.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/strlen.o
+ .text.strlen   0x0000000000000000       0x1c ./build/a3700/release/bl2/strlen.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/strlen.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/strlen.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/strncmp.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/strncmp.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/strncmp.o
+ .text.strncmp  0x0000000000000000       0x38 ./build/a3700/release/bl2/strncmp.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/strncmp.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/strncmp.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/subr_prf.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/subr_prf.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/subr_prf.o
+ .text.snprintf_func
+                0x0000000000000000       0x2c ./build/a3700/release/bl2/subr_prf.o
+ .text.kvprintf
+                0x0000000000000000      0xddc ./build/a3700/release/bl2/subr_prf.o
+ .rodata.kvprintf
+                0x0000000000000000       0xb0 ./build/a3700/release/bl2/subr_prf.o
+ .text.sprintf  0x0000000000000000       0x70 ./build/a3700/release/bl2/subr_prf.o
+ .text.vsprintf
+                0x0000000000000000       0x4c ./build/a3700/release/bl2/subr_prf.o
+ .text.vsnprintf
+                0x0000000000000000       0x5c ./build/a3700/release/bl2/subr_prf.o
+ .text.snprintf
+                0x0000000000000000       0x50 ./build/a3700/release/bl2/subr_prf.o
+ .text.vsnrprintf
+                0x0000000000000000       0x60 ./build/a3700/release/bl2/subr_prf.o
+ .rodata.hex2ascii_data
+                0x0000000000000000       0x28 ./build/a3700/release/bl2/subr_prf.o
+ .rodata.str1.1
+                0x0000000000000000       0x13 ./build/a3700/release/bl2/subr_prf.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/subr_prf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/subr_prf.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/a3700_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/a3700_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/a3700_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_cci.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_cci.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_cci.o
+ .text.plat_marvell_interconnect_init
+                0x0000000000000000       0x14 ./build/a3700/release/bl2/marvell_cci.o
+ .text.plat_marvell_interconnect_enter_coherency
+                0x0000000000000000        0xc ./build/a3700/release/bl2/marvell_cci.o
+ .text.plat_marvell_interconnect_exit_coherency
+                0x0000000000000000        0xc ./build/a3700/release/bl2/marvell_cci.o
+ .rodata.cci_map
+                0x0000000000000000        0x8 ./build/a3700/release/bl2/marvell_cci.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/marvell_cci.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_cci.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/xlat_tables_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/xlat_tables_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/xlat_tables_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/xlat_tables.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/xlat_tables.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/xlat_tables.o
+ .text.enable_mmu_el3
+                0x0000000000000000       0x6c ./build/a3700/release/bl2/xlat_tables.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_common.o
+ .text.marvell_get_spsr_for_bl32_entry
+                0x0000000000000000        0x8 ./build/a3700/release/bl2/marvell_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/plat_common.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/plat_common.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/plat_common.o
+ .text.bl31_plat_enable_mmu
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/plat_common.o
+ .text.bl32_plat_enable_mmu
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/plat_common.o
+ .text.bl31_plat_runtime_setup
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/plat_common.o
+ .text.platform_core_pos_helper
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/plat_common.o
+ .comment       0x0000000000000000       0x30 ./build/a3700/release/bl2/plat_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/plat_common.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/platform_up_stack.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/platform_up_stack.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/platform_up_stack.o
+ .text.plat_get_my_stack
+                0x0000000000000000       0x10 ./build/a3700/release/bl2/platform_up_stack.o
+ .text.deprecatedplatform_get_stack
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/platform_up_stack.o
+ .text.deprecatedplatform_set_stack
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/platform_up_stack.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_entrypoint.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_entrypoint.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_entrypoint.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/spinlock.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/spinlock.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/spinlock.o
+ .text.spin_lock
+                0x0000000000000000       0x20 ./build/a3700/release/bl2/spinlock.o
+ .text.spin_unlock
+                0x0000000000000000        0x8 ./build/a3700/release/bl2/spinlock.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/early_exceptions.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/early_exceptions.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/early_exceptions.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/debug.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/debug.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/debug.o
+ .text.asm_print_str
+                0x0000000000000000       0x18 ./build/a3700/release/bl2/debug.o
+ .text.asm_print_hex
+                0x0000000000000000       0x30 ./build/a3700/release/bl2/debug.o
+ .rodata.panic_str
+                0x0000000000000000       0x11 ./build/a3700/release/bl2/debug.o
+ .text.do_panic
+                0x0000000000000000       0x28 ./build/a3700/release/bl2/debug.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/cache_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/cache_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/cache_helpers.o
+ .text.clean_dcache_range
+                0x0000000000000000       0x34 ./build/a3700/release/bl2/cache_helpers.o
+ .text.do_dcsw_op
+                0x0000000000000000       0xdc ./build/a3700/release/bl2/cache_helpers.o
+ .text.dcsw_op_louis
+                0x0000000000000000       0x14 ./build/a3700/release/bl2/cache_helpers.o
+ .text.dcsw_op_all
+                0x0000000000000000       0x14 ./build/a3700/release/bl2/cache_helpers.o
+ .text.dcsw_op_level1
+                0x0000000000000000       0x10 ./build/a3700/release/bl2/cache_helpers.o
+ .text.dcsw_op_level2
+                0x0000000000000000       0x10 ./build/a3700/release/bl2/cache_helpers.o
+ .text.dcsw_op_level3
+                0x0000000000000000       0x10 ./build/a3700/release/bl2/cache_helpers.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/misc_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/misc_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/misc_helpers.o
+ .text.get_afflvl_shift
+                0x0000000000000000       0x14 ./build/a3700/release/bl2/misc_helpers.o
+ .text.mpidr_mask_lower_afflvls
+                0x0000000000000000       0x1c ./build/a3700/release/bl2/misc_helpers.o
+ .text.eret     0x0000000000000000        0x4 ./build/a3700/release/bl2/misc_helpers.o
+ .text.memcpy16
+                0x0000000000000000       0x30 ./build/a3700/release/bl2/misc_helpers.o
+ .text.disable_mmu_el3
+                0x0000000000000000       0x1c ./build/a3700/release/bl2/misc_helpers.o
+ .text.disable_mmu_icache_el3
+                0x0000000000000000        0x8 ./build/a3700/release/bl2/misc_helpers.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/platform_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/platform_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/platform_helpers.o
+ .text.deprecatedplatform_get_core_pos
+                0x0000000000000000       0x18 ./build/a3700/release/bl2/platform_helpers.o
+ .text.plat_crash_console_init
+                0x0000000000000000        0x8 ./build/a3700/release/bl2/platform_helpers.o
+ .text.plat_crash_console_putc
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/platform_helpers.o
+ .text.plat_reset_handler
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/platform_helpers.o
+ .text.plat_disable_acp
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/platform_helpers.o
+ .text.bl1_plat_prepare_exit
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/platform_helpers.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/console.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/console.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/console.o
+ .text.console_uninit
+                0x0000000000000000       0x10 ./build/a3700/release/bl2/console.o
+ .text.console_getc
+                0x0000000000000000        0xc ./build/a3700/release/bl2/console.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/a3700_console.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/a3700_console.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/a3700_console.o
+ .text.console_core_getc
+                0x0000000000000000        0xc ./build/a3700/release/bl2/a3700_console.o
+ .text          0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_helpers.o
+ .data          0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_helpers.o
+ .bss           0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_helpers.o
+ .text.plat_my_core_pos
+                0x0000000000000000        0x8 ./build/a3700/release/bl2/marvell_helpers.o
+ .text.plat_marvell_calc_core_pos
+                0x0000000000000000       0x10 ./build/a3700/release/bl2/marvell_helpers.o
+ .text.plat_crash_console_init
+                0x0000000000000000       0x1c ./build/a3700/release/bl2/marvell_helpers.o
+ .text.plat_crash_console_putc
+                0x0000000000000000        0xc ./build/a3700/release/bl2/marvell_helpers.o
+ .text.platform_mem_init
+                0x0000000000000000        0x4 ./build/a3700/release/bl2/marvell_helpers.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000004017000 0x000000000000c000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000004017000                . = 0x4017000
+                0x0000000000000001                ASSERT ((. == ALIGN (0x1000)), BL2_BASE address is not aligned on a page boundary.)
+
+ro              0x0000000004017000     0x3000
+                0x0000000004017000                __RO_START__ = .
+ *bl2_entrypoint.o(.text*)
+ .text.bl2_entrypoint
+                0x0000000004017000       0x70 ./build/a3700/release/bl2/bl2_entrypoint.o
+                0x0000000004017000                bl2_entrypoint
+ *(.text*)
+ .text.device_type_fip
+                0x0000000004017070        0x8 ./build/a3700/release/bl2/io_fip.o
+                0x0000000004017070                device_type_fip
+ .text.fip_dev_open
+                0x0000000004017078       0x14 ./build/a3700/release/bl2/io_fip.o
+ .text.fip_dev_close
+                0x000000000401708c       0x18 ./build/a3700/release/bl2/io_fip.o
+ .text.fip_file_len
+                0x00000000040170a4       0x14 ./build/a3700/release/bl2/io_fip.o
+ .text.fip_dev_init
+                0x00000000040170b8       0x9c ./build/a3700/release/bl2/io_fip.o
+ .text.fip_file_close
+                0x0000000004017154       0x40 ./build/a3700/release/bl2/io_fip.o
+ .text.fip_file_read
+                0x0000000004017194       0xb8 ./build/a3700/release/bl2/io_fip.o
+ .text.fip_file_open
+                0x000000000401724c       0xec ./build/a3700/release/bl2/io_fip.o
+ .text.register_io_dev_fip
+                0x0000000004017338       0x38 ./build/a3700/release/bl2/io_fip.o
+                0x0000000004017338                register_io_dev_fip
+ .text.device_type_memmap
+                0x0000000004017370        0x8 ./build/a3700/release/bl2/io_memmap.o
+                0x0000000004017370                device_type_memmap
+ .text.memmap_dev_open
+                0x0000000004017378       0x14 ./build/a3700/release/bl2/io_memmap.o
+ .text.memmap_dev_close
+                0x000000000401738c        0x8 ./build/a3700/release/bl2/io_memmap.o
+ .text.memmap_block_open
+                0x0000000004017394       0x38 ./build/a3700/release/bl2/io_memmap.o
+ .text.memmap_block_seek
+                0x00000000040173cc       0x20 ./build/a3700/release/bl2/io_memmap.o
+ .text.memmap_block_len
+                0x00000000040173ec       0x14 ./build/a3700/release/bl2/io_memmap.o
+ .text.memmap_block_close
+                0x0000000004017400       0x2c ./build/a3700/release/bl2/io_memmap.o
+ .text.memmap_block_write
+                0x000000000401742c       0x50 ./build/a3700/release/bl2/io_memmap.o
+ .text.memmap_block_read
+                0x000000000401747c       0x54 ./build/a3700/release/bl2/io_memmap.o
+ .text.register_io_dev_memmap
+                0x00000000040174d0       0x38 ./build/a3700/release/bl2/io_memmap.o
+                0x00000000040174d0                register_io_dev_memmap
+ .text.free_entity
+                0x0000000004017508       0x48 ./build/a3700/release/bl2/io_storage.o
+ .text.io_register_device
+                0x0000000004017550       0x24 ./build/a3700/release/bl2/io_storage.o
+                0x0000000004017550                io_register_device
+ .text.io_dev_open
+                0x0000000004017574       0x14 ./build/a3700/release/bl2/io_storage.o
+                0x0000000004017574                io_dev_open
+ .text.io_dev_init
+                0x0000000004017588       0x18 ./build/a3700/release/bl2/io_storage.o
+                0x0000000004017588                io_dev_init
+ .text.io_dev_close
+                0x00000000040175a0       0x18 ./build/a3700/release/bl2/io_storage.o
+                0x00000000040175a0                io_dev_close
+ .text.io_open  0x00000000040175b8       0xd8 ./build/a3700/release/bl2/io_storage.o
+                0x00000000040175b8                io_open
+ .text.io_seek  0x0000000004017690       0x1c ./build/a3700/release/bl2/io_storage.o
+                0x0000000004017690                io_seek
+ .text.io_size  0x00000000040176ac       0x1c ./build/a3700/release/bl2/io_storage.o
+                0x00000000040176ac                io_size
+ .text.io_read  0x00000000040176c8       0x1c ./build/a3700/release/bl2/io_storage.o
+                0x00000000040176c8                io_read
+ .text.io_close
+                0x00000000040176e4       0x44 ./build/a3700/release/bl2/io_storage.o
+                0x00000000040176e4                io_close
+ .text.bl2_plat_sec_mem_layout
+                0x0000000004017728        0xc ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x0000000004017728                bl2_plat_sec_mem_layout
+ .text.bl2_plat_get_bl31_params
+                0x0000000004017734       0xb0 ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x0000000004017734                bl2_plat_get_bl31_params
+ .text.bl2_plat_flush_bl31_params
+                0x00000000040177e4       0x10 ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x00000000040177e4                bl2_plat_flush_bl31_params
+ .text.bl2_plat_get_bl31_ep_info
+                0x00000000040177f4       0x10 ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x00000000040177f4                bl2_plat_get_bl31_ep_info
+ .text.marvell_bl2_early_platform_setup
+                0x0000000004017804       0x4c ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x0000000004017804                marvell_bl2_early_platform_setup
+ .text.bl2_early_platform_setup
+                0x0000000004017850        0x4 ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x0000000004017850                bl2_early_platform_setup
+ .text.bl2_platform_setup
+                0x0000000004017854        0x4 ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x0000000004017854                bl2_platform_setup
+ .text.marvell_bl2_plat_arch_setup
+                0x0000000004017858       0x40 ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x0000000004017858                marvell_bl2_plat_arch_setup
+ .text.bl2_plat_arch_setup
+                0x0000000004017898        0x4 ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x0000000004017898                bl2_plat_arch_setup
+ .text.bl2_plat_set_bl31_ep_info
+                0x000000000401789c       0x18 ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x000000000401789c                bl2_plat_set_bl31_ep_info
+ .text.bl2_plat_set_bl33_ep_info
+                0x00000000040178b4       0x30 ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x00000000040178b4                bl2_plat_set_bl33_ep_info
+ .text.bl2_plat_get_bl33_meminfo
+                0x00000000040178e4       0x10 ./build/a3700/release/bl2/marvell_bl2_setup.o
+                0x00000000040178e4                bl2_plat_get_bl33_meminfo
+ .text.open_fip
+                0x00000000040178f4       0x60 ./build/a3700/release/bl2/marvell_io_storage.o
+ .text.open_memmap
+                0x0000000004017954       0x60 ./build/a3700/release/bl2/marvell_io_storage.o
+ .text.marvell_io_setup
+                0x00000000040179b4       0x54 ./build/a3700/release/bl2/marvell_io_storage.o
+                0x00000000040179b4                marvell_io_setup
+ .text.plat_marvell_io_setup
+                0x0000000004017a08        0x4 ./build/a3700/release/bl2/marvell_io_storage.o
+                0x0000000004017a08                plat_marvell_io_setup
+ .text.plat_marvell_get_alt_image_source
+                0x0000000004017a0c        0x8 ./build/a3700/release/bl2/marvell_io_storage.o
+                0x0000000004017a0c                plat_marvell_get_alt_image_source
+ .text.plat_get_image_source
+                0x0000000004017a14       0x8c ./build/a3700/release/bl2/marvell_io_storage.o
+                0x0000000004017a14                plat_get_image_source
+ .text.bl2_main
+                0x0000000004017aa0       0x60 ./build/a3700/release/bl2/bl2_main.o
+                0x0000000004017aa0                bl2_main
+ .text.bl2_arch_setup
+                0x0000000004017b00        0xc ./build/a3700/release/bl2/bl2_arch_setup.o
+                0x0000000004017b00                bl2_arch_setup
+ .text.bl2_load_images
+                0x0000000004017b0c       0xc8 ./build/a3700/release/bl2/bl2_image_load.o
+                0x0000000004017b0c                bl2_load_images
+ .text.reserve_mem
+                0x0000000004017bd4       0x48 ./build/a3700/release/bl2/bl_common.o
+                0x0000000004017bd4                reserve_mem
+ .text.load_image
+                0x0000000004017c1c      0x130 ./build/a3700/release/bl2/bl_common.o
+                0x0000000004017c1c                load_image
+ .text.load_auth_image
+                0x0000000004017d4c        0x4 ./build/a3700/release/bl2/bl_common.o
+                0x0000000004017d4c                load_auth_image
+ .text.unsigned_num_print
+                0x0000000004017d50       0x74 ./build/a3700/release/bl2/tf_printf.o
+ .text.tf_printf
+                0x0000000004017dc4      0x304 ./build/a3700/release/bl2/tf_printf.o
+                0x0000000004017dc4                tf_printf
+ .text.memset   0x00000000040180c8       0x1c ./build/a3700/release/bl2/mem.o
+                0x00000000040180c8                memset
+ .text.memcmp   0x00000000040180e4       0x34 ./build/a3700/release/bl2/mem.o
+                0x00000000040180e4                memcmp
+ .text.memcpy   0x0000000004018118       0x20 ./build/a3700/release/bl2/mem.o
+                0x0000000004018118                memcpy
+ .text.memmove  0x0000000004018138       0x48 ./build/a3700/release/bl2/mem.o
+                0x0000000004018138                memmove
+ .text.putchar  0x0000000004018180       0x2c ./build/a3700/release/bl2/putchar.o
+                0x0000000004018180                putchar
+ .text.init_xlation_table_inner
+                0x00000000040181ac      0x1e0 ./build/a3700/release/bl2/xlat_tables_common.o
+ .text.print_mmap
+                0x000000000401838c        0x4 ./build/a3700/release/bl2/xlat_tables_common.o
+                0x000000000401838c                print_mmap
+ .text.mmap_add_region
+                0x0000000004018390       0xdc ./build/a3700/release/bl2/xlat_tables_common.o
+                0x0000000004018390                mmap_add_region
+ .text.mmap_add
+                0x000000000401846c       0x38 ./build/a3700/release/bl2/xlat_tables_common.o
+                0x000000000401846c                mmap_add
+ .text.init_xlation_table
+                0x00000000040184a4       0x48 ./build/a3700/release/bl2/xlat_tables_common.o
+                0x00000000040184a4                init_xlation_table
+ .text.init_xlat_tables
+                0x00000000040184ec       0x74 ./build/a3700/release/bl2/xlat_tables.o
+                0x00000000040184ec                init_xlat_tables
+ .text.enable_mmu_el1
+                0x0000000004018560       0x68 ./build/a3700/release/bl2/xlat_tables.o
+                0x0000000004018560                enable_mmu_el1
+ .text.plat_get_ns_image_entrypoint
+                0x00000000040185c8        0x8 ./build/a3700/release/bl2/marvell_common.o
+                0x00000000040185c8                plat_get_ns_image_entrypoint
+ .text.marvell_get_spsr_for_bl33_entry
+                0x00000000040185d0       0x20 ./build/a3700/release/bl2/marvell_common.o
+                0x00000000040185d0                marvell_get_spsr_for_bl33_entry
+ .text.plat_marvell_get_mmap
+                0x00000000040185f0        0xc ./build/a3700/release/bl2/marvell_common.o
+                0x00000000040185f0                plat_marvell_get_mmap
+ .text.marvell_setup_page_tables
+                0x00000000040185fc       0x70 ./build/a3700/release/bl2/marvell_common.o
+                0x00000000040185fc                marvell_setup_page_tables
+ *fill*         0x000000000401866c        0x4 
+ .text.plat_set_my_stack
+                0x0000000004018670       0x18 ./build/a3700/release/bl2/platform_up_stack.o
+                0x0000000004018670                plat_set_my_stack
+ .text.flush_dcache_range
+                0x0000000004018688       0x34 ./build/a3700/release/bl2/cache_helpers.o
+                0x0000000004018688                flush_dcache_range
+ .text.inv_dcache_range
+                0x00000000040186bc       0x34 ./build/a3700/release/bl2/cache_helpers.o
+                0x00000000040186bc                inv_dcache_range
+ .text.smc      0x00000000040186f0        0x4 ./build/a3700/release/bl2/misc_helpers.o
+                0x00000000040186f0                smc
+ .text.zeromem16
+                0x00000000040186f4       0x2c ./build/a3700/release/bl2/misc_helpers.o
+                0x00000000040186f4                zeromem16
+ .text.plat_report_exception
+                0x0000000004018720        0x4 ./build/a3700/release/bl2/platform_helpers.o
+                0x0000000004018720                plat_report_exception
+ .text.plat_error_handler
+                0x0000000004018724        0x8 ./build/a3700/release/bl2/platform_helpers.o
+                0x0000000004018724                plat_error_handler
+ .text.plat_panic_handler
+                0x000000000401872c        0x8 ./build/a3700/release/bl2/platform_helpers.o
+                0x000000000401872c                plat_panic_handler
+ .text.console_init
+                0x0000000004018734       0x14 ./build/a3700/release/bl2/console.o
+                0x0000000004018734                console_init
+ .text.console_putc
+                0x0000000004018748        0xc ./build/a3700/release/bl2/console.o
+                0x0000000004018748                console_putc
+ .text.console_core_init
+                0x0000000004018754       0x64 ./build/a3700/release/bl2/a3700_console.o
+                0x0000000004018754                console_core_init
+ .text.console_core_putc
+                0x00000000040187b8       0x44 ./build/a3700/release/bl2/a3700_console.o
+                0x00000000040187b8                console_core_putc
+ *(.rodata*)
+ *fill*         0x00000000040187fc        0x4 
+ .rodata.version_string
+                0x0000000004018800       0x28 ./build/a3700/release/bl2/build_message.o
+                0x0000000004018800                version_string
+ .rodata.build_message
+                0x0000000004018828       0x20 ./build/a3700/release/bl2/build_message.o
+                0x0000000004018828                build_message
+ .rodata.fip_dev_info
+                0x0000000004018848       0x10 ./build/a3700/release/bl2/io_fip.o
+ .rodata.fip_dev_connector
+                0x0000000004018858        0x8 ./build/a3700/release/bl2/io_fip.o
+ .rodata.uuid_null
+                0x0000000004018860       0x10 ./build/a3700/release/bl2/io_fip.o
+ .rodata.fip_dev_funcs
+                0x0000000004018870       0x48 ./build/a3700/release/bl2/io_fip.o
+ .rodata.memmap_dev_info
+                0x00000000040188b8       0x10 ./build/a3700/release/bl2/io_memmap.o
+ .rodata.memmap_dev_funcs
+                0x00000000040188c8       0x48 ./build/a3700/release/bl2/io_memmap.o
+ .rodata.memmap_dev_connector
+                0x0000000004018910        0x8 ./build/a3700/release/bl2/io_memmap.o
+ .rodata.bl2_uuid_spec
+                0x0000000004018918       0x10 ./build/a3700/release/bl2/marvell_io_storage.o
+ .rodata.bl31_uuid_spec
+                0x0000000004018928       0x10 ./build/a3700/release/bl2/marvell_io_storage.o
+ .rodata.policies
+                0x0000000004018938       0x90 ./build/a3700/release/bl2/marvell_io_storage.o
+ .rodata.bl33_uuid_spec
+                0x00000000040189c8       0x10 ./build/a3700/release/bl2/marvell_io_storage.o
+ .rodata.scp_bl2_uuid_spec
+                0x00000000040189d8       0x10 ./build/a3700/release/bl2/marvell_io_storage.o
+ .rodata.fip_block_spec
+                0x00000000040189e8       0x10 ./build/a3700/release/bl2/marvell_io_storage.o
+ .rodata.str1.1
+                0x00000000040189f8       0x12 ./build/a3700/release/bl2/bl2_main.o
+ .rodata.str1.1
+                0x0000000004018a0a       0x46 ./build/a3700/release/bl2/bl2_image_load.o
+ .rodata.tf_printf
+                0x0000000004018a50       0x30 ./build/a3700/release/bl2/tf_printf.o
+ .rodata.str1.1
+                0x0000000004018a80        0x3 ./build/a3700/release/bl2/tf_printf.o
+ *fill*         0x0000000004018a83        0x5 
+ .rodata.plat_marvell_mmap
+                0x0000000004018a88       0x80 ./build/a3700/release/bl2/a3700_common.o
+                0x0000000004018a88                plat_marvell_mmap
+                0x0000000004018b08                . = ALIGN (0x8)
+                0x0000000004018b08                __PARSER_LIB_DESCS_START__ = .
+ *(.img_parser_lib_descs)
+                0x0000000004018b08                __PARSER_LIB_DESCS_END__ = .
+ *(.vectors)
+ *fill*         0x0000000004018b08      0x4f8 
+ .vectors       0x0000000004019000      0x800 ./build/a3700/release/bl2/early_exceptions.o
+                0x0000000004019000                early_exceptions
+                0x0000000004019800                __RO_END_UNALIGNED__ = .
+                0x000000000401a000                . = NEXT (0x1000)
+ *fill*         0x0000000004019800      0x800 
+                0x000000000401a000                __RO_END__ = .
+                0x000000000401a000                __RW_START__ = .
+
+.iplt           0x000000000401a000        0x0
+ .iplt          0x000000000401a000        0x0 ./build/a3700/release/bl2/io_fip.o
+
+.rela.dyn       0x000000000401a000        0x0
+ .rela.iplt     0x000000000401a000        0x0 ./build/a3700/release/bl2/io_fip.o
+
+.data           0x000000000401a000        0x8
+                0x000000000401a000                __DATA_START__ = .
+ *(.data*)
+ .data.console_base
+                0x000000000401a000        0x8 ./build/a3700/release/bl2/console.o
+                0x000000000401a008                __DATA_END__ = .
+
+.igot.plt       0x000000000401a008        0x0
+ .igot.plt      0x000000000401a008        0x0 ./build/a3700/release/bl2/io_fip.o
+
+stacks          0x000000000401a040      0x400
+                0x000000000401a040                __STACKS_START__ = .
+ *(tzfw_normal_stacks)
+ tzfw_normal_stacks
+                0x000000000401a040      0x400 ./build/a3700/release/bl2/platform_up_stack.o
+                0x000000000401a440                __STACKS_END__ = .
+
+.bss            0x000000000401a440      0x444
+                0x000000000401a440                __BSS_START__ = .
+ *(SORT(.bss*))
+ .bss.bl2_tzram_layout
+                0x000000000401a440       0x40 ./build/a3700/release/bl2/marvell_bl2_setup.o
+ .bss.base_xlation_table
+                0x000000000401a480       0x20 ./build/a3700/release/bl2/xlat_tables.o
+ .bss.backend_image_spec
+                0x000000000401a4a0        0x8 ./build/a3700/release/bl2/io_fip.o
+ .bss.current_file
+                0x000000000401a4a8       0x30 ./build/a3700/release/bl2/io_fip.o
+ .bss.backend_dev_handle
+                0x000000000401a4d8        0x8 ./build/a3700/release/bl2/io_fip.o
+ .bss.current_file
+                0x000000000401a4e0       0x20 ./build/a3700/release/bl2/io_memmap.o
+ .bss.entity_map
+                0x000000000401a500       0x20 ./build/a3700/release/bl2/io_storage.o
+ .bss.entity_pool
+                0x000000000401a520       0x40 ./build/a3700/release/bl2/io_storage.o
+ .bss.bl31_params_mem
+                0x000000000401a560      0x180 ./build/a3700/release/bl2/marvell_bl2_setup.o
+ .bss.memmap_dev_con
+                0x000000000401a6e0        0x8 ./build/a3700/release/bl2/marvell_io_storage.o
+ .bss.fip_dev_handle
+                0x000000000401a6e8        0x8 ./build/a3700/release/bl2/marvell_io_storage.o
+ .bss.fip_dev_con
+                0x000000000401a6f0        0x8 ./build/a3700/release/bl2/marvell_io_storage.o
+ .bss.memmap_dev_handle
+                0x000000000401a6f8        0x8 ./build/a3700/release/bl2/marvell_io_storage.o
+ .bss.mmap      0x000000000401a700      0x160 ./build/a3700/release/bl2/xlat_tables_common.o
+ .bss.xlat_max_va
+                0x000000000401a860        0x8 ./build/a3700/release/bl2/xlat_tables_common.o
+ .bss.xlat_max_pa
+                0x000000000401a868        0x8 ./build/a3700/release/bl2/xlat_tables_common.o
+ .bss.tcr_ps_bits
+                0x000000000401a870        0x8 ./build/a3700/release/bl2/xlat_tables.o
+ .bss.entity_count
+                0x000000000401a878        0x4 ./build/a3700/release/bl2/io_storage.o
+ .bss.dev_count
+                0x000000000401a87c        0x4 ./build/a3700/release/bl2/io_storage.o
+ .bss.next_xlat
+                0x000000000401a880        0x4 ./build/a3700/release/bl2/xlat_tables_common.o
+ *(COMMON)
+                0x000000000401a884                __BSS_END__ = .
+
+xlat_table      0x000000000401b000     0x4000
+ *(xlat_table)
+ xlat_table     0x000000000401b000     0x4000 ./build/a3700/release/bl2/xlat_tables_common.o
+                0x000000000401f000                __RW_END__ = .
+                0x000000000401f000                __BL2_END__ = .
+                0x0000000000000444                __BSS_SIZE__ = SIZEOF (.bss)
+                0x0000000000000001                ASSERT ((. <= 0x4023000), BL2 image has exceeded its limit.)
+LOAD ./build/a3700/release/bl2/build_message.o
+LOAD ./build/a3700/release/bl2/io_fip.o
+LOAD ./build/a3700/release/bl2/io_memmap.o
+LOAD ./build/a3700/release/bl2/io_storage.o
+LOAD ./build/a3700/release/bl2/marvell_bl2_setup.o
+LOAD ./build/a3700/release/bl2/marvell_io_storage.o
+LOAD ./build/a3700/release/bl2/bl2_main.o
+LOAD ./build/a3700/release/bl2/bl2_arch_setup.o
+LOAD ./build/a3700/release/bl2/bl2_image_load.o
+LOAD ./build/a3700/release/bl2/bl_common.o
+LOAD ./build/a3700/release/bl2/tf_printf.o
+LOAD ./build/a3700/release/bl2/abort.o
+LOAD ./build/a3700/release/bl2/assert.o
+LOAD ./build/a3700/release/bl2/exit.o
+LOAD ./build/a3700/release/bl2/mem.o
+LOAD ./build/a3700/release/bl2/printf.o
+LOAD ./build/a3700/release/bl2/putchar.o
+LOAD ./build/a3700/release/bl2/puts.o
+LOAD ./build/a3700/release/bl2/sscanf.o
+LOAD ./build/a3700/release/bl2/strchr.o
+LOAD ./build/a3700/release/bl2/strcmp.o
+LOAD ./build/a3700/release/bl2/strlen.o
+LOAD ./build/a3700/release/bl2/strncmp.o
+LOAD ./build/a3700/release/bl2/subr_prf.o
+LOAD ./build/a3700/release/bl2/a3700_common.o
+LOAD ./build/a3700/release/bl2/marvell_cci.o
+LOAD ./build/a3700/release/bl2/xlat_tables_common.o
+LOAD ./build/a3700/release/bl2/xlat_tables.o
+LOAD ./build/a3700/release/bl2/marvell_common.o
+LOAD ./build/a3700/release/bl2/plat_common.o
+LOAD ./build/a3700/release/bl2/platform_up_stack.o
+LOAD ./build/a3700/release/bl2/bl2_entrypoint.o
+LOAD ./build/a3700/release/bl2/spinlock.o
+LOAD ./build/a3700/release/bl2/early_exceptions.o
+LOAD ./build/a3700/release/bl2/debug.o
+LOAD ./build/a3700/release/bl2/cache_helpers.o
+LOAD ./build/a3700/release/bl2/misc_helpers.o
+LOAD ./build/a3700/release/bl2/platform_helpers.o
+LOAD ./build/a3700/release/bl2/console.o
+LOAD ./build/a3700/release/bl2/a3700_console.o
+LOAD ./build/a3700/release/bl2/marvell_helpers.o
+OUTPUT(build/a3700/release/bl2/bl2.elf elf64-littleaarch64)
+
+.comment        0x0000000000000000       0x2f
+ .comment       0x0000000000000000       0x2f ./build/a3700/release/bl2/build_message.o
+                                         0x30 (size before relaxing)
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/io_fip.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/io_memmap.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/io_storage.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/marvell_bl2_setup.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/marvell_io_storage.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/bl2_main.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/bl2_arch_setup.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/bl2_image_load.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/bl_common.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/tf_printf.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/mem.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/putchar.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/a3700_common.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/xlat_tables_common.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/xlat_tables.o
+ .comment       0x000000000000002f       0x30 ./build/a3700/release/bl2/marvell_common.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/build_message.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/io_fip.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/io_memmap.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/io_storage.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_bl2_setup.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_io_storage.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_arch_setup.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/bl2_image_load.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/bl_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/tf_printf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/mem.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/putchar.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/a3700_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/xlat_tables_common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/xlat_tables.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ./build/a3700/release/bl2/marvell_common.o

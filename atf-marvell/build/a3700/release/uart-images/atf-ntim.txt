@@ -1,0 +1,1044 @@
+Version:                        0x00030600
+Trusted:                        0x00000000
+Issue Date:                     0x15112017		; today's date
+OEM UniqueID:                   0x4D52564C		; MRVL
+Stepping:                       0x00000000
+Processor Type:                 <undefined>		; ARMADA3700
+Boot Flash Signature:           0x55415223		; Select UAR'23
+Number of Images:               3
+Size of Reserved in bytes:      44
+
+Image ID:                       0x54494D48		; TIMH
+Next Image ID:                  0x57544d49		; WTMI next
+Flash Entry Address:            0x00000000		; TIM flash addr
+Load Address:                   0x20006000		; TIM ISRAM addr
+Image Size To CRC in bytes:     0xFFFFFFFF
+Hash Algorithm ID:              32			; SHA-256
+Partition Number:               0
+Image Filename: TIM_ATF.bin
+
+Image ID:                       0x57544d49		; WTMI
+Next Image ID:                  0x4F424d49		; OBMI next
+Flash Entry Address:            0x00004000		; WTMI flash addr
+Load Address:                   0x1FFF0000		; WTMI RAM addr
+Image Size To CRC in bytes:     0xFFFFFFFF
+Hash Algorithm ID:              32			; SHA-256
+Partition Number:               0
+Image Filename: /misc/datamate/uboot/A3700-utils-marvell/wtmi/build/wtmi.bin
+
+Image ID:                       0x4F424d49		; OBMI
+Next Image ID:                  0xFFFFFFFF		; NONE
+Flash Entry Address:            0x00015000		; OBMI flash addr
+Load Address:                   0x64100000		; OBMI RAM addr
+Image Size To CRC in bytes:     0xFFFFFFFF
+Hash Algorithm ID:              32			; SHA-256
+Partition Number:               0
+Image Filename: ./build/a3700/release/boot-image.bin
+
+Reserved Data:
+0x4F505448	;OPTH
+0x00000002	; Number of Reserved Packages
+0x43525632	;CRV2
+0x0000001C	; Size of CRV2 package in bytes
+0x00000002	; Number of cores to release
+0x00000000	; Core_ID: 0 - AP0, 1 - AP1, 2 - CM3
+0x04100000	; PC address for Core_ID above
+0x00000002	; Core_ID: 0 - AP0, 1 - AP1, 2 - CM3
+0x1FFF0000	; PC address for Core_ID above
+0x5465726D	;Term
+0x00000008	; Size of this package in bytes
+
+Extended Reserved Data:
+Consumer ID:
+CID: TBRI
+PID: GPP1
+PID: GPP2
+PID: DDR3
+End Consumer ID:
+GPP:
+GPP_PID: GPP1
+GPP Operations:
+GPP_IGNORE_INST_TO: 0x0
+End GPP Operations:
+Instructions:
+TEST_ADDR_AND_BRANCH: 0xC000D00C 0x80000000 0x00000000 == BPS1
+AND_VAL: 0xC000D00C 0x7FFFFFFF
+WRITE: 0xC0013840 0x00001D1E
+LABEL: BPS0
+NOP:
+BRANCH: BPS0
+LABEL: BPS1
+
+; A3700 IO configuration
+; On A3700 DB north bridge VDDO_PIO and VDDO_SIO are 1.8V, VDDO_JIO is 2.5V.
+AND_VAL: 0xC0015600 0xFFFFFEFF
+OR_VAL: 0xC0015600 0x00000600
+; On A3700 DB south bridge GBE core voltage is 2.5V.
+OR_VAL: 0xC001A400 0x00000040
+;
+;************************************************
+; A3700 read NB OTP
+; Put all OTP data to SM0~SM2, LSB->MSB
+; Put SVC_REV to SM3
+;************************************************
+; 1. Clear OTP_MODE_NB (RD0012600h [15]) = 0
+AND_VAL: 0xC0012600 0xFFFF7FFF
+;
+; 2. Set OTP_POR_B_NB (RD0012600h [13]) = 1
+OR_VAL: 0xC0012600 0x00002000
+;
+; 3. Set OTP_PTR_INC_NB (RD0012608h [8]) = 1.
+OR_VAL: 0xC0012608 0x00000100
+;
+; 4. Set OTP_RPTR_RST_NB (RD0012600h [14]) to 1
+; Then write 0 to the same field
+OR_VAL: 0xC0012600 0x00004000
+;
+AND_VAL: 0xC0012600 0xFFFFBFFF
+;
+; 5. Toggle OTP_PRDT_NB (RD0012600h [3]).
+;    a. Set OTP_PRDT_NB (RD0012600h [3]) to 1.
+;    b. Clear OTP_PRDT_NB (RD0012600h [3]) to 0.
+;    c. Wait for a minimum of 100 ns.
+;    d. Set OTP_PRDT_NB (RD0012600h [3]) to 1.
+OR_VAL: 0xC0012600 0x00000008
+;
+AND_VAL: 0xC0012600 0xFFFFFFF7
+;
+OR_VAL: 0xC0012600 0x00000008
+;
+DELAY: 0x00000001	;	delay 1us
+;
+; 6. Read the content of OTP 32-bits at a time
+;    from register OTP_RPORT_NB (RD0012604h [31:0])
+;
+LOAD_SM_ADDR: SM0 0xC0012604
+DELAY: 0x00000001
+LOAD_SM_ADDR: SM1 0xC0012604
+DELAY: 0x00000001
+LOAD_SM_ADDR: SM2 0xC0012604
+;
+; read SVC_REV in OTP Data[11:8] = (D0>>8 & 0xF)
+MOV_SM_SM: SM3 SM0
+RSHIFT_SM_VAL: SM3 8
+AND_SM_VAL: SM3 0xF
+;
+End Instructions:
+End GPP:
+GPP:
+GPP_PID: GPP2
+GPP Operations:
+GPP_IGNORE_INST_TO: 0x0
+End GPP Operations:
+Instructions:
+; Check the status of counter #3, if the counter is inactive,
+; reenable the counter.
+TEST_ADDR_AND_BRANCH: 0xC0008330 0x00000002 0x00000002 == CNT3
+AND_VAL: 0xC0008330 0xFFFFFFFE
+OR_VAL: 0xC0008330 0x00000001
+LABEL: CNT3
+
+; Clean the mailbox
+TEST_ADDR_AND_BRANCH: 0xC001404C 0x00000001 0x00000001 == MB1
+WRITE: 0x64000400 0x00000000
+LABEL: MB1
+
+; Set cpu dram window size
+; When cs1 is not selected, cpu dram window size is just dram cs0's size,
+; and window base address is 0 as cs0 memory always starts from 0;
+; when dram cs1 is selected, the cpu dram window is the combination of cs0 and cs1,
+; the window base address is still 0 while the window size is the sum of cs0's size and cs1's size,
+; and since cs0 and cs1 are in succession, then cs1's start address is just cs0's size,
+; so in this case the cpu dram window size is the sum of cs1's start addess and cs1's size.
+
+TEST_ADDR_AND_BRANCH: 0xC0000208 0x00000001 0x00000001 == CS1
+LOAD_SM_ADDR: SM0 0xC0000200	; load reg of Channel 0 MMAP CS Low to SM0
+LOAD_SM_VAL: SM1 0x00000000	; the 64KB number of cs0 memory starting address is always 0
+BRANCH: CONF
+
+LABEL: CS1
+LOAD_SM_ADDR: SM0 0xC0000208	; load reg of Channel 1 MMAP CS Low to SM0
+MOV_SM_SM: SM1 SM0		; SM1 = SM0
+AND_SM_VAL: SM1 0xFF800000	; MEM_START_ADDR_L_SHIFT = 23, get Starting cs1 memory starting address
+RSHIFT_SM_VAL: SM1 0x00000010	; count the 64KB number of cs1 memory starting address
+
+LABEL: CONF
+RSHIFT_SM_VAL: SM0 0x00000010	; AREA_LEN_SHIFT = 16
+AND_SM_VAL: SM0 0x0000001F	; &= AREA_LEN_SHIFT
+; count current cs dram size value in window size format,
+; the number of 1s specifies the size of the window in 64 KB granularity,
+; dram size value = (1 << AREA_LEN) - 1;
+LOAD_SM_VAL: SM2 0x00000001
+LABEL: CON
+TEST_SM_AND_BRANCH: SM0 0x0000001F 0x00000000 == OUT
+LSHIFT_SM_VAL: SM2 0x00000001
+SUB_SM_VAL: SM0 0x00000001
+BRANCH: CON
+LABEL: OUT
+SUB_SM_VAL: SM2 0x00000001
+; finish current cs dram size value counting;
+ADD_SM_SM: SM2 SM1		; count total dram size value in window size format
+; Because Armada 37x0's 4G address space includes an "internal register" window,
+; its cpu dram window size is up to 2 GB;
+; So when total dram size is more than 2GB, only 2GB is configured in the first cpu dram window,
+; the remain dram sizes are configured in other cpu dram windows in atf later;
+; Window size value's valid bits are bits[23:0];
+; When total dram size is 2GB, the value in window size format will be 0x7FFFF;
+; when total dram size is more than 2GB, some continuous left bits of 0x7FFFF will be set,
+; the left bits mask is 0xFF8000.
+TEST_SM_AND_BRANCH: SM2 0x00FF8000 0x00000000 == DRAM
+LOAD_SM_VAL: SM2 0x00007FFF
+LABEL: DRAM
+AND_VAL: 0xC000CF00 0xFFFFFFFE	; disable cpu dram window
+STORE_SM_ADDR: SM2 0xC000CF04	; write cpu dram window size
+OR_VAL: 0xC000CF00 0x00000001	; enable cpu dram window
+End Instructions:
+End GPP:
+DDR Initialization:
+DDR_PID: DDR3
+Operations:
+DDR_INIT_ENABLE: 0x00000001
+End Operations:
+Instructions:
+; AVS enable
+; OTP data is stored in SM0~SM2 from GPP1
+; SVC_REV is stored in SM3
+; SM4 is the AVS value to set into register
+;
+LOAD_SM_VAL: SM4 0x98E3FFFF ;# Set VDD to 1150mV by default
+;
+TEST_SM_AND_BRANCH: SM3 0x0000000F 0x2 < AVSR	;use default value if SVC_REV<2
+;
+; read SVC_1000Mhz in OTP Data[43:38] = (D1>>6 & 0x3F)
+RSHIFT_SM_VAL: SM1 6
+ADD_SM_VAL: SM1 0xd	;base voltage is 0.898V(0xd), AVS=OTP+0xd
+AND_SM_VAL: SM1 0x3F
+; set AVS to register
+LOAD_SM_VAL: SM4 0x9000FFFF
+LSHIFT_SM_VAL: SM1 16
+OR_SM_SM: SM4 SM1
+LSHIFT_SM_VAL: SM1 6
+OR_SM_SM: SM4 SM1
+;
+; perform AVS reset
+LABEL: AVSR
+STORE_SM_ADDR: SM4 0xC0011500
+AND_VAL: 0xC0011500 0x1FFFFFFF	;# release AVS reset
+OR_VAL: 0xC0011500 0x50000000	;# Enable AVS
+DELAY: 0x000186A0               ;# Delay 100ms for AVS voltage wake up
+; Switch all clocks to REFCLOCK
+WRITE: 0XC0013010 0x00000000
+WRITE: 0XC0018010 0x00000000
+; TBG-A: SE vco_div 0x1,
+; DIFF vco_div 0x1, vco_range 0xa
+; tbg_N 0x30 KVCO = 1600 MHz
+WRITE: 0xC0013204 0x00F00091
+WRITE: 0xC0013204 0x00F000C1
+WRITE: 0xC0013220 0x08030803
+WRITE: 0xC0013208 0x94011400
+WRITE: 0xC0013230 0x00040002
+WRITE: 0xC0013208 0x94011400
+WRITE: 0xC001320C 0x56E656E5
+WRITE: 0xC0013210 0x014B014A
+WRITE: 0xC001320C 0x56E656E5
+WRITE: 0xC0013204 0x00F000C0
+WRITE: 0xC0013208 0x94011400
+WAIT_FOR_BIT_SET: 0xC0013208 0x80008000 0x00100000
+DELAY: 0x00000100
+; TBG-B: SE vco_div 0x1,
+; DIFF vco_div 0x2, vco_range 0xb
+; tbg_N 0x3c KVCO = 2000 MHz
+WRITE: 0xC0013204 0x00F100C0
+WRITE: 0xC0013204 0x00F100C0
+WRITE: 0xC0013220 0x08030803
+WRITE: 0xC0013208 0x14019400
+WRITE: 0xC0013230 0x00040002
+WRITE: 0xC0013208 0x14019400
+WRITE: 0xC001320C 0x56E656E5
+WRITE: 0xC0013210 0x014B014A
+WRITE: 0xC001320C 0x56E656E5
+WRITE: 0xC0013204 0x00F000C0
+WRITE: 0xC0013208 0x14019400
+WAIT_FOR_BIT_SET: 0xC0013208 0x80008000 0x00100000
+DELAY: 0x00000100
+; Set clocks to 1000/800 preset
+WRITE: 0xC0013014 0x00000000
+WRITE: 0xC0013004 0x1296202C
+WRITE: 0xC0013008 0x21061AA9
+WRITE: 0xC001300C 0x20543084
+WRITE: 0xC0013000 0x03CFCCF2
+WRITE: 0xC0018014 0x00180000
+WRITE: 0xC0018004 0x02515508
+WRITE: 0xC0018008 0x00300880
+WRITE: 0xC001800C 0x00000540
+WRITE: 0xC0018000 0x003F8F40
+WRITE: 0xC0013210 0x014B014A
+; Switch all clocks to back dividers
+WRITE: 0xC0013010 0x00009FFF
+WRITE: 0xC0018010 0x000007AA
+; Set DDR3 to 800MHz
+; Pre-init
+WRITE: 0xC0014008 0x00404500
+WRITE: 0xC0002000 0x00010000
+WRITE: 0xC0002004 0x00000000
+; DDR MAC init
+WRITE: 0xC0000340 0x0F0F0FEF
+WRITE: 0xC0000344 0x100000AA
+WRITE: 0xC0000310 0x00200000
+WRITE: 0xC0000304 0x00000000
+WRITE: 0xC0000308 0x00000000
+WRITE: 0xC0000200 0x000D0001
+WRITE: 0xC0000204 0x00000000
+WRITE: 0xC0000220 0x13020532
+WRITE: 0xC0000044 0x00030200
+WRITE: 0xC00002c0 0x00006000
+WRITE: 0xC00002c4 0x00100020
+WRITE: 0xC0000058 0x0000143F
+WRITE: 0xC0000048 0x00000001
+WRITE: 0xC0000180 0x00010200
+WRITE: 0xC0000050 0x000001FF
+WRITE: 0xC000004c 0x00000000
+WRITE: 0xC0000054 0x00000480
+WRITE: 0xC0000300 0x0000080B
+WRITE: 0xC0000380 0x0007A120
+WRITE: 0xC0000384 0x00030D40
+WRITE: 0xC0000388 0x0960006B
+WRITE: 0xC000038c 0x00000200
+WRITE: 0xC0000390 0x00400100
+WRITE: 0xC0000394 0x00F003CF
+WRITE: 0xC0000398 0x00F80200
+WRITE: 0xC000039c 0x00000808
+WRITE: 0xC00003a0 0x00040614
+WRITE: 0xC00003a4 0x00000001
+WRITE: 0xC00003a8 0x00000C04
+WRITE: 0xC00003ac 0x202A0C1F
+WRITE: 0xC00003b0 0x0C0C060C
+WRITE: 0xC00003b4 0x04000600
+WRITE: 0xC00003b8 0x00000800
+WRITE: 0xC00003bc 0x02020404
+WRITE: 0xC00003c0 0x00000000
+WRITE: 0xC00003c4 0x00000000
+WRITE: 0xC00003dc 0x00081239
+WRITE: 0xC00002c8 0x00000000
+WRITE: 0xC0000064 0x00000006
+WRITE: 0xC0000044 0x00030200
+; DDR PHY init
+WRITE: 0xC0001004 0xC4477889
+WRITE: 0xC0001008 0x05500FFA
+WRITE: 0xC000100c 0x0521DF77
+WRITE: 0xC0001010 0x00300108
+WRITE: 0xC0001028 0x00000000
+WRITE: 0xC0001030 0x03800000
+WRITE: 0xC0001034 0x00000000
+WRITE: 0xC0001040 0x00000400
+WRITE: 0xC00010c0 0x80000001
+WRITE: 0xC00010d0 0x00000000
+WRITE: 0xC00010e0 0x00011FF0
+WRITE: 0xC0001090 0x00000000
+WRITE: 0xC0001094 0x00000000
+WRITE: 0xC0001098 0x00000000
+WRITE: 0xC000109c 0x00000000
+WRITE: 0xC00010a0 0x00000000
+WRITE: 0xC00010a4 0x00000000
+WRITE: 0xC00010a8 0x00000000
+WRITE: 0xC00010ac 0x00000000
+WRITE: 0xC00010b0 0x00000000
+WRITE: 0xC0001000 0x00044041
+WRITE: 0xC0001014 0x00080200
+WRITE: 0xC0001038 0x00000002
+WRITE: 0xC000103c 0x00000010
+WRITE: 0xC0001180 0x0000020A
+WRITE: 0xC0001184 0x0000020A
+WRITE: 0xC0001188 0x0000020A
+WRITE: 0xC000118c 0x0000020A
+WRITE: 0xC0001190 0x0000020A
+WRITE: 0xC0001194 0x0000020A
+WRITE: 0xC0001198 0x0000020A
+WRITE: 0xC000119c 0x0000020A
+WRITE: 0xC00011a0 0x0000020A
+WRITE: 0xC0001050 0x1F130000
+WRITE: 0xC0001054 0x20190000
+WRITE: 0xC0001074 0x20200000
+WRITE: 0xC0001058 0x08080000
+WRITE: 0xC000105c 0x08080000
+WRITE: 0xC0001060 0x08080000
+WRITE: 0xC0001064 0x08080000
+WRITE: 0xC0001068 0x08080000
+WRITE: 0xC000106c 0x08080000
+WRITE: 0xC0001070 0x08080000
+
+;init read fifo pointer and OFF spec parameter
+WRITE: 0xC0001000 0x00044041
+WRITE: 0xC00003bc 0x02020404
+
+;phyinit_sequence_sync2(1, 3, 2, 0)
+WRITE: 0xC0001014 0x00080200
+WRITE: 0xC0001038 0x00000003
+WRITE: 0xC000103C 0x00000020
+WRITE: 0xC0001020 0x80000000
+WRITE: 0xC0001020 0x20000000
+WRITE: 0xC0001020 0x40000000
+DELAY: 0x0000000A
+WRITE: 0xC0001020 0x80000000
+DELAY: 0x0000000A
+
+;DDRPHY pads POWERDOWN disable
+OR_VAL: 0xC0001030 0x03800000
+OR_VAL: 0xC0001034 0x00000000
+OR_VAL: 0xC0001090 0x00000000
+OR_VAL: 0xC0001094 0x00000000
+
+;initC2Dofset
+WRITE: 0xC00010E0 0x00010001
+WRITE: 0xC00010D0 0x000C0300
+WRITE: 0xC00010D4 0x00300C03
+WRITE: 0xC00010D8 0x00300C03
+WRITE: 0xC00010DC 0x00300C03
+WRITE: 0xC00010E0 0x00010002
+WRITE: 0xC00010D0 0x000C0300
+WRITE: 0xC00010D4 0x00300C03
+WRITE: 0xC00010D8 0x00300C03
+WRITE: 0xC00010DC 0x00300C03
+WRITE: 0xC00010E0 0x00010004
+WRITE: 0xC00010D0 0x000C0300
+WRITE: 0xC00010D4 0x00300C03
+WRITE: 0xC00010D8 0x00300C03
+WRITE: 0xC00010DC 0x00300C03
+WRITE: 0xC00010E0 0x00010008
+WRITE: 0xC00010D0 0x000C0300
+WRITE: 0xC00010D4 0x00300C03
+WRITE: 0xC00010D8 0x00310842
+WRITE: 0xC00010DC 0x00300C03
+WRITE: 0xC00010E0 0x00010010
+WRITE: 0xC00010D0 0x000C0300
+WRITE: 0xC00010D4 0x00300C03
+WRITE: 0xC00010D8 0x00310842
+WRITE: 0xC00010DC 0x00300C03
+
+; Trigger DDR init for channel 0
+WRITE: 0xC0000020 0x11000001
+WAIT_FOR_BIT_SET: 0xC0000008 0x00000001 0x00001000
+TEST_ADDR_AND_BRANCH: 0xC001404C 0xFFFFFF00 0x00000000 == DTUN	; Call mvebu_dram_dll_tune()
+; if 0xC001404C !=0, recovery the parameter
+LOAD_SM_ADDR: SM2 0xC001404C
+RSHIFT_SM_VAL: SM2 0x00000008
+MOV_SM_SM: SM0 SM2
+AND_SM_VAL: SM0 0x0000003F		; DLL_PHASE_POS for MC6_CH0_PHY_DLL_CONTROL_B0
+
+RSHIFT_SM_VAL: SM2 0x00000006
+MOV_SM_SM: SM1 SM2
+AND_SM_VAL: SM1 0x0000003F		; DLL_PHASE_NEG for MC6_CH0_PHY_DLL_CONTROL_B0
+
+LSHIFT_SM_VAL: SM0 0x00000010		; DLL_PHASE_POS_SHIFT = 16
+LSHIFT_SM_VAL: SM1 0x00000018		; DLL_PHASE_NEG_SHIFT = 24
+OR_SM_SM: SM0 SM1			; SM0 <= both phases
+
+LOAD_SM_ADDR: SM1 0xC0001050
+AND_SM_VAL: SM1 0xC0C0FFFF
+OR_SM_SM: SM0 SM1			; SM0 = SM0 | SM1
+STORE_SM_ADDR: SM0 0xC0001050		; SM0 => MC6_CH0_PHY_DLL_CONTROL_B0
+
+RSHIFT_SM_VAL: SM2 0x00000006
+MOV_SM_SM: SM0 SM2
+AND_SM_VAL: SM0 0x3F			; DLL_PHASE_POS for MC6_CH0_PHY_DLL_CONTROL_B1
+
+RSHIFT_SM_VAL: SM2 0x00000006
+MOV_SM_SM: SM1 SM2
+AND_SM_VAL: SM1 0x3F			; DLL_PHASE_NEG for MC6_CH0_PHY_DLL_CONTROL_B1
+
+LSHIFT_SM_VAL: SM0 0x00000010		; DLL_PHASE_POS_SHIFT = 16
+LSHIFT_SM_VAL: SM1 0x00000018		; DLL_PHASE_NEG_SHIFT = 24
+OR_SM_SM: SM0 SM1			; SM0 <= both phases
+
+LOAD_SM_ADDR: SM1 0xC0001054
+AND_SM_VAL: SM1 0xC0C0FFFF
+OR_SM_SM: SM0 SM1			; SM0 = SM0 | SM1
+STORE_SM_ADDR: SM0 0xC0001054		; SM0 => MC6_CH0_PHY_DLL_CONTROL_B1
+
+LOAD_SM_ADDR: SM2 0xC0014050
+RSHIFT_SM_VAL: SM2 0x00000014
+MOV_SM_SM: SM0 SM2
+AND_SM_VAL: SM0 0x0000003F		; DLL_PHASE_POS for MC6_CH0_PHY_DLL_CONTROL_ADCM
+
+RSHIFT_SM_VAL: SM2 0x00000006
+MOV_SM_SM: SM1 SM2
+AND_SM_VAL: SM1 0x0000003F		; DLL_PHASE_NEG for MC6_CH0_PHY_DLL_CONTROL_ADCM
+
+LSHIFT_SM_VAL: SM0 0x00000010		; DLL_PHASE_POS_SHIFT = 16
+LSHIFT_SM_VAL: SM1 0x00000018		; DLL_PHASE_NEG_SHIFT = 24
+OR_SM_SM: SM0 SM1			; SM0 <= both phases
+
+LOAD_SM_ADDR: SM1 0xC0001074
+AND_SM_VAL: SM1 0xC0C0FFFF
+OR_SM_SM: SM0 SM1			; SM0 = SM0 | SM1
+STORE_SM_ADDR: SM0 0xC0001074		; SM0 => MC6_CH0_PHY_DLL_CONTROL_ADCM
+
+; Change Dll_reset_timer to 128*32 cycles
+LOAD_SM_ADDR: SM0 0xC000101C		; regval <= MC6_CH0_PHY_CONTROL_8
+OR_SM_VAL: SM0 0x80000000		; regval |= DLL_RESET_TIMER(DLL_RST_TIMER_VAL);
+STORE_SM_ADDR: SM0 0xC000101C		; regval => MC6_CH0_PHY_CONTROL_8
+
+LOAD_SM_VAL: SM2 0x00000003		; return to FINC after RSTD
+BRANCH: RSTD				; Reset DLL PHY
+
+;
+;************************************************
+;************ mvebu_dram_dll_set() **************
+;************************************************
+; SM0 - DLL PH POS
+; SM1 - DLL PH NEG
+; SM2 - where to return
+; SM7 - IN round
+;************************************************
+LABEL: DSET
+;
+LSHIFT_SM_VAL: SM0 0x00000010		; DLL_PHASE_POS_SHIFT = 16
+LSHIFT_SM_VAL: SM1 0x00000018		; DLL_PHASE_NEG_SHIFT = 24
+OR_SM_SM: SM0 SM1			; SM0 <= both phases
+
+TEST_SM_AND_BRANCH: SM2 0x00000003 0x00000000 == DSR0	; Got Failure?
+TEST_SM_AND_BRANCH: SM7 0x00000007 0x00000000 == DSR0	; Round == 0?
+TEST_SM_AND_BRANCH: SM7 0x00000007 0x00000001 == DSR1	; Round == 1?
+TEST_SM_AND_BRANCH: SM7 0x00000007 0x00000002 == DSR1	; Round == 2?
+TEST_SM_AND_BRANCH: SM7 0x00000007 0x00000003 == DSR2	; Round == 3?
+TEST_SM_AND_BRANCH: SM7 0x00000007 0x00000004 == DSR2	; Round == 4?
+TEST_SM_AND_BRANCH: SM7 0x00000007 0x00000005 == DSR3	; Round == 5?
+TEST_SM_AND_BRANCH: SM7 0x00000007 0x00000006 == DSR3	; Round == 6?
+
+LABEL: DSR0
+LOAD_SM_ADDR: SM1 0xC0001050
+AND_SM_VAL: SM1 0xC0C0FFFF
+OR_SM_SM: SM0 SM1			; SM0 = SM0 | SM1
+STORE_SM_ADDR: SM0 0xC0001050		; SM0 => MC6_CH0_PHY_DLL_CONTROL_B0
+LOAD_SM_ADDR: SM1 0xC0001054
+AND_SM_VAL: SM1 0xC0C0FFFF
+OR_SM_SM: SM0 SM1			; SM0 = SM0 | SM1
+STORE_SM_ADDR: SM0 0xC0001054		; SM0 => MC6_CH0_PHY_DLL_CONTROL_B1
+BRANCH: RSTD
+
+LABEL: DSR1
+LOAD_SM_ADDR: SM1 0xC0001050
+AND_SM_VAL: SM1 0xC0C0FFFF
+OR_SM_SM: SM0 SM1			; SM0 = SM0 | SM1
+STORE_SM_ADDR: SM0 0xC0001050		; SM0 => MC6_CH0_PHY_DLL_CONTROL_B0
+BRANCH: RSTD
+
+LABEL: DSR2
+LOAD_SM_ADDR: SM1 0xC0001054
+AND_SM_VAL: SM1 0xC0C0FFFF
+OR_SM_SM: SM0 SM1			; SM0 = SM0 | SM1
+STORE_SM_ADDR: SM0 0xC0001054		; SM0 => MC6_CH0_PHY_DLL_CONTROL_B1
+BRANCH: RSTD
+
+LABEL: DSR3
+LOAD_SM_ADDR: SM1 0xC0001074
+AND_SM_VAL: SM1 0xC0C0FFFF
+OR_SM_SM: SM0 SM1			; SM0 = SM0 | SM1
+STORE_SM_ADDR: SM0 0xC0001074		; SM0 => MC6_CH0_PHY_DLL_CONTROL_ADCM
+BRANCH: RSTD
+;
+; ********** Reset DLL PHY **********
+;
+LABEL: RSTD
+; Updates DLL master. Block read/MMR for 4096 MCLK cycles to guarantee DLL lock.
+; Either wait 4096 MCLK (memPll/4) cycles, or check DLL lock status
+WRITE: 0xC0001020 0x20000000		; PHY_DLL_RESET => MC6_CH0_PHY_CONTROL_9
+;
+; Reset PHY DLL. Dll_reset_timer ([31:24] of PHY Control Register 8,
+; Offset 0x41C/0xC1C) is set to 0x10, reset DLL for 128*32=4096 MCLK cycles.
+DELAY: 0x00000064			; DLL_RESET_WAIT_US=(100 uS)
+;
+; Copy DLL master to DLL slave. Slave controls the actual delay_l.
+; Both DLL bypass and DLL needs 'update'.
+WRITE: 0xC0001020 0x40000000		; DLL_UPDATE_EN_PULSE => MC6_CH0_PHY_CONTROL_9
+;
+; Update Dll delay_l. When Dll_update_timer ([20:16] of PHY Control Register 8,
+; Offset 0x41C/0xC1C) is 0x11, assert DLL_UPDATE_EN pin for 0x11*16 = 272 MCLK cycles.
+DELAY: 0x00000064			; DLL_RESET_WAIT_US=(100 uS)
+;
+; KW Finish DLL update
+WRITE: 0xC0001020 0x00000000		; 0 => MC6_CH0_PHY_CONTROL_9
+DELAY: 0x00000032			; DLL_UPDATE_WAIT_US=(50 uS)
+;
+TEST_SM_AND_BRANCH: SM2 0x00000003 0x00000001 == LB1	; Return to LB1 if SM2 = 1
+TEST_SM_AND_BRANCH: SM2 0x00000003 0x00000002 == LB2	; Return to LB2 if SM2 = 2
+TEST_SM_AND_BRANCH: SM2 0x00000003 0x00000003 == FINC	; Return to FINC if SM2 = 3
+BRANCH: FINB						; return to FINB
+;============= end of mvebu_dram_dll_set() =============
+;
+;
+;***********************************************************************************
+; Keep DDR tune method with CM3 read/write DDR directly, in case
+; it is needed for future debug.
+;
+;;************************************************
+;;*********** mvebu_dram_dll_wr_test() ***********
+;;************************************************
+;; DRAM_DIRECT_START = 0x66000000
+;; DRAM_DIRECT_SIZE  = 0x200
+;; SM3 -
+;; SM4 - value and address
+;; SM5 - temp value
+;;************************************************
+;; Phase 1 - fill memory with address values
+;LABEL: DWTS
+;;
+;LOAD_SM_VAL: SM4 0x66000000		; Start on DRAM_DIRECT_START
+;;
+;;****************WRITE*******************
+;LABEL: DWRT				; Memory write loop
+;STORE_SM_TO_ADDR_IN_SM: SM4 SM4		; *SM4 => SM4
+;ADD_SM_VAL: SM4 0x00000004		; Increment address
+;TEST_SM_AND_BRANCH: SM4 0xFFFFFFFF 0x66000200 <= DWRT	; Loop through DRAM_DIRECT_SIZE area
+;;**************WRITE END*****************
+;;
+;; Phase 2 - test memory values
+;LOAD_SM_VAL: SM4 0x66000000		; Start on DRAM_DIRECT_START
+;;
+;;****************TEST********************
+;LABEL: DTST				; Memory test loop
+;LOAD_SM_FROM_ADDR_IN_SM: SM5 SM4	; SM5 <= *SM4
+;SUB_SM_SM: SM5 SM4			; SM5 = SM5 - SM4
+;TEST_SM_AND_BRANCH: SM5 0xFFFFFFFF 0x00000000 != RET1	; Memory value is not the same as its address
+;;
+;ADD_SM_VAL: SM4 0x00000004		; Increment address
+;TEST_SM_AND_BRANCH: SM4 0xFFFFFFFF 0x66000200 <= DTST	; Loop through DRAM_DIRECT_SIZE area
+;;**************TEST END******************
+;;
+;BRANCH: RET0				; All memory verified OK
+;;============= end of mvebu_dram_dll_wr_test() =============
+;***********************************************************************************
+;
+;
+;************************************************
+;*********** mvebu_dram_dll_dma_eng_init() ******
+;************************************************
+; Initialize DMA engine for ddr tune, by which mem
+; init and CRC calculate features will be used.
+; 1. configure DMA engine decode window.
+; 2. prepare for DMA mem init.
+;************************************************
+LABEL: DMAI
+;**************** Configure Channel 0 Decode window START ***
+WRITE: 0xC0060b40 0x30001
+WRITE: 0xC0060b50 0x0
+WRITE: 0xC0060b70 0xffff0000
+WRITE: 0xC0060b90 0x0
+WRITE: 0xC0060ba0 0x0
+;**************** Configure Channel 0 Decode window END *****
+;
+WRITE: 0xC0060940 0x3ff			; Enable Channel 0 Interrupt
+WRITE: 0xC0060be0 0x55555555		; Set Init value for Mem
+WRITE: 0xC0060be4 0xAAAAAAAA
+WRITE: 0xC0060bb0 0x6000000		; Set mem init dst addr
+WRITE: 0xC0060bc0 0x200			; Set mem init length
+;
+BRANCH: DMAF
+;
+;************************************************
+;*********** mvebu_dram_dll_wr_test() ***********
+;************************************************
+; 1. Run mem init feature of DMA engine to fill
+;    0x200 bytes of DDR starts from 0x6000000.
+; 2. Run CRC feature of DMA engine to calculate
+;    the CRC value of these 0x200 bytes, then check
+;    if it is correct or not.
+; 3. The CRC calculate Descriptor for DMA engine is
+;    located at DRAM address 0xfffffc0, which is
+;    0x6fffffC0 for CM3.
+;
+; Note:
+;    For CM3 to access DDR, address starts from 0x60000000.
+;    For DMA engine to access DDR, address starts from 0x0.
+;
+;************************************************
+LABEL: DWTS
+;**************** Step 1. DMA mem init START ****************
+;
+WRITE: 0xC0060910 0x8224		; Set DMA Channel 0 mode to mem init
+;
+OR_VAL: 0xC0060920 0x1			; Start the DMA mem init
+;
+;Wait until DMA channel 0 is not busy
+WAIT_FOR_BIT_CLEAR: 0xC0060920 0x00000030 0x00001000
+;
+;**************** Step 1. DMA mem init END *******************
+;
+;************** Configure Descr for DMA START ****************
+; Set descr for DMA in DDR addr 0xfffffc0, which is 0x6fffffC0
+; for CM3. Since descr is in DDR, and the DDR tuning has not
+; finished yet, which means it is unstable, the value written
+; here might not be able to read out correctly by DMA engine,
+; need to check it right afer the written.
+;
+; DMA descriptor structure
+; u32 status;
+; u32 crc;
+; u32 command;
+; u32 NDA;
+; u32 byte_count;
+; u32 DA;
+; u32 SA;
+; u32 last
+;
+WRITE: 0x6fffffC0 0x80000000		; Status
+TEST_ADDR_AND_BRANCH: 0x6fffffC0 0xFFFFFFFF 0x80000000 != RET1	; Memory value is not correct
+;
+WRITE: 0x6fffffC4 0x00000000		; CRC
+TEST_ADDR_AND_BRANCH: 0x6fffffC4 0xFFFFFFFF 0x00000000 != RET1	; Memory value is not correct
+;
+WRITE: 0x6fffffC8 0x42000001		; Command
+TEST_ADDR_AND_BRANCH: 0x6fffffC8 0xFFFFFFFF 0x42000001 != RET1	; Memory value is not correct
+;
+WRITE: 0x6fffffCC 0x00000000		; NDA
+TEST_ADDR_AND_BRANCH: 0x6fffffCC 0xFFFFFFFF 0x00000000 != RET1	; Memory value is not correct
+;
+WRITE: 0x6fffffD0 0x00000200		; Size
+TEST_ADDR_AND_BRANCH: 0x6fffffD0 0xFFFFFFFF 0x00000200 != RET1	; Memory value is not correct
+;
+WRITE: 0x6fffffD4 0x06000400		; DST ADDR
+TEST_ADDR_AND_BRANCH: 0x6fffffD4 0xFFFFFFFF 0x06000400 != RET1	; Memory value is not correct
+;
+WRITE: 0x6fffffD8 0x06000000		; SRC ADDR
+TEST_ADDR_AND_BRANCH: 0x6fffffD8 0xFFFFFFFF 0x06000000 != RET1	; Memory value is not correct
+;
+WRITE: 0x6fffffDC 0x00000000		; Last SRC ADDR
+TEST_ADDR_AND_BRANCH: 0x6fffffDC 0xFFFFFFFF 0x00000000 != RET1	; Memory value is not correct
+;
+;************** Configure Descr for DMA END ****************
+;
+;************** Step 2. DMA Calculate CRC START **************
+;
+; Configuring DMA engine to CRC mode
+WRITE: 0xC0060910 0x00008221
+;
+;Program Descriptor address
+WRITE: 0xC0060B00 0x0fffffC0
+;
+; START the CRC calculate
+OR_VAL: 0xC0060920 0x1
+;
+;wait until it is complete (descriptor owner is back to CPU)
+WAIT_FOR_BIT_CLEAR: 0x6fffffC0 0x80000000 0x00001000
+;
+;wait until DMA channel 0 is not busy
+WAIT_FOR_BIT_CLEAR: 0xC0060920 0x00000030 0x00001000
+;
+;**************** Read CRC value from Descr and check *******
+; 0x21233705 is CRC checksum for static pattern of 0x55555555/0xAAAAAAAA
+; with a memory region of 0x200
+TEST_ADDR_AND_BRANCH: 0x6fffffC4 0xFFFFFFFF 0x21233705 != RET1	; CRC value is not correct
+;
+;**************TEST END******************
+;
+BRANCH: RET0				; All memory verified OK
+;============= end of mvebu_dram_dll_wr_test() =============
+;
+;
+;************************************************
+;*********** mvebu_dram_dll_search() ************
+;************************************************
+; SM6  - IN dll and OUT optimal_rd_dll
+; SM7  - IN round
+; SM8  - dll_var
+; SM9  - MIN_RD_DLL
+; SM10 - MAX_RD_DLL
+; SM15 - dll search mode
+;************************************************
+LABEL: SRCH
+;
+;
+LOAD_SM_VAL: SM2  0x00000001		; Request return to LB1 from mvebu_dram_dll_set()
+;
+; Set init value for dll_var, MIN_RD_DLL, MAX_RD_DLL, and search mode
+TEST_SM_AND_BRANCH: SM7 0x00000007 0x00000000 != SRIN	; Round != 0?
+;
+; Round == 0
+LOAD_SM_VAL: SM8  0x00000000		; dll_var = DLL_PHSEL_START (0)
+LOAD_SM_VAL: SM9  0x0000FFFF		; MIN_RD_DLL = 0xFFFF
+LOAD_SM_VAL: SM10 0x0000FFFF		; MAX_RD_DLL = 0xFFFF
+LOAD_SM_VAL: SM15 0x00000000		; SM15 = 0, search all range to find dll_medium
+BRANCH: PHLP
+;
+; Round != 0
+LABEL: SRIN
+MOV_SM_SM: SM8 SM14			; dll_var = dll_median;
+MOV_SM_SM: SM9 SM14			; MIN_RD_DLL = dll_median;
+MOV_SM_SM: SM10 SM14			; MAX_RD_DLL = dll_median;
+LOAD_SM_VAL: SM15 0x00000001		; SM15 = 1, find MAX_RD_DLL
+;
+;*************** PHASE LOOP *************
+;
+; Do different LOOP according to SM7 and SM15
+LABEL: PHLP				; Phase loop
+TEST_SM_AND_BRANCH: SM7 0x00000007 0x00000000 == SR0	; Round == 0?
+TEST_SM_AND_BRANCH: SM7 0x00000001 0x00000001 == SR1	; Round == 1,3,5?
+TEST_SM_AND_BRANCH: SM7 0x00000001 0x00000000 == SR2	; Round == 2,4,6?
+;
+; if (round == 0)
+LABEL: SR0				; Round 0
+MOV_SM_SM: SM0 SM8			; dll_phsel = dll_var;  /* POS */
+MOV_SM_SM: SM1 SM8			; dll_phsel1 = dll_var; /* NEG */
+BRANCH: DSET				; Call mvebu_dram_dll_set()
+;
+; if (round == 1,3,5)
+LABEL: SR1				; Round 1
+MOV_SM_SM: SM0 SM8			; dll_phsel = dll_var;      /* POS */
+MOV_SM_SM: SM1 SM14			; dll_phsel1 = dll_median; /* NEG */
+BRANCH: DSET				; Call mvebu_dram_dll_set()
+;
+; if (round == 2,4,6)
+LABEL: SR2
+MOV_SM_SM: SM0 SM6			; dll_phsel = dll; /* POS */
+MOV_SM_SM: SM1 SM8			; dll_phsel1 = dll_var;    /* NEG */
+BRANCH: DSET				; Call mvebu_dram_dll_set()
+;
+LABEL: LB1				; Return from mvebu_dram_dll_set()
+BRANCH: DWTS				; Call mvebu_dram_dll_wr_test()
+;
+;****************SUCCESS*****************
+LABEL: RET0				; OK from mvebu_dram_dll_wr_test()
+TEST_SM_AND_BRANCH: SM15 0x00000003 0x00000001 == SCN1	; SM15 = 1, only update MAX_RD_DLL
+TEST_SM_AND_BRANCH: SM15 0x00000003 0x00000002 == SCN2	; SM15 = 2, only update MIN_RD_DLL
+;
+;SM15 = 0, update MAX_RD_DLL & MAX_RD_DLL
+TEST_SM_AND_BRANCH: SM9 0x0000FFFF 0x0000FFFF != SCN1	; if (MIN_RD_DLL != 0xFFFF), MIN_RD_DLL unchanged
+MOV_SM_SM: SM9 SM8			; MIN_RD_DLL = dll_var;
+;
+LABEL: SCN1
+MOV_SM_SM: SM10 SM8			; MAX_RD_DLL = dll_var;
+BRANCH: SCN3				; Continue phase loop execution
+;
+LABEL: SCN2
+MOV_SM_SM: SM9 SM8			; MIN_RD_DLL = dll_var;
+TEST_SM_AND_BRANCH: SM8 0x000000FF 0x00000000 == SCON	; dll_var = DLL_PHSEL_START ?
+;
+SUB_SM_VAL: SM8 0x00000001		; dll_var -= DLL_PHSEL_STEP
+BRANCH: PHLP
+;
+;*****************FAIL*******************
+LABEL: RET1				; NOK from mvebu_dram_dll_wr_test()
+TEST_SM_AND_BRANCH: SM15 0x00000003 0x00000000 != SCON	; exit loop
+;
+; SM15 = 0, parse all range
+LABEL: SCN3				; Modify variables and continue
+ADD_SM_VAL: SM8 0x00000001		; dll_var += DLL_PHSEL_STEP
+TEST_SM_AND_BRANCH: SM8 0x000000FF 0x0000003F <= PHLP	; dll_var < DLL_PHSEL_END ?
+;
+;*********** PHASE LOOP END *************
+;
+;
+LABEL: SCON
+; if SM15 = 1, set SM15 =2, run PHLP again
+TEST_SM_AND_BRANCH: SM15 0x00000003 0x00000001 != SCN4
+LOAD_SM_VAL: SM15 0x00000002		; SM15 = 2, find MIN_RD_DLL
+MOV_SM_SM: SM8 SM14			; dll_var = dll_median
+BRANCH: PHLP
+;
+;***************CONTINUE*****************
+LABEL: SCN4				; MIN_RD_DLL != 0xFFFF
+;
+;
+; optimal_rd_dll =  (MAX_RD_DLL - MIN_RD_DLL)/2 + MIN_RD_DLL;
+SUB_SM_SM: SM10 SM9			; optimal_rd_dll = MAX_RD_DLL - MIN_RD_DLL
+RSHIFT_SM_VAL: SM10 0x00000001		; optimal_rd_dll >>= 1;
+ADD_SM_SM: SM10 SM9			; optimal_rd_dll += MIN_RD_DLL;
+;
+;
+LOAD_SM_VAL: SM2 0x00000002		; Request return to LB2 from mvebu_dram_dll_set()
+TEST_SM_AND_BRANCH: SM7 0x00000007 0x00000000 == SRR0	; Round == 0?
+TEST_SM_AND_BRANCH: SM7 0x00000001 0x00000001 == SRR1	; Round == 1,3,5?
+TEST_SM_AND_BRANCH: SM7 0x00000001 0x00000000 == SRR2	; Round == 2,4,6?
+;
+; if (round == 0)
+LABEL: SRR0				; Round 0
+MOV_SM_SM: SM0 SM10			; dll_phsel = optimal_rd_dll;  /* POS */
+MOV_SM_SM: SM1 SM10			; dll_phsel1 = optimal_rd_dll; /* NEG */
+BRANCH: DECR				; Call mvebu_dram_dll_set()
+;
+; if (round == 1,3,5)
+LABEL: SRR1				; Round 1
+MOV_SM_SM: SM0 SM10			; dll_phsel = optimal_rd_dll;   /* POS */
+MOV_SM_SM: SM1 SM14			; dll_phsel1 = dll_medium; 		/* NEG */
+BRANCH: DECR
+;
+; if (round == 2,4,6)
+LABEL: SRR2
+MOV_SM_SM: SM0 SM6			; dll_phsel = dll;  			/* POS */
+MOV_SM_SM: SM1 SM10			; dll_phsel1 = optimal_rd_dll;  /* NEG */
+BRANCH: DECR				; Call mvebu_dram_dll_set()
+;
+LABEL: DECR				; do nothing, keep it for debug info
+;
+;
+BRANCH: DSET				; Call mvebu_dram_dll_set()
+;
+LABEL: LB2				; Return from mvebu_dram_dll_set()
+MOV_SM_SM: SM6 SM10			; optimal_rd_dll is in SM10
+;
+LABEL: RET2				; return location depends on round
+TEST_SM_AND_BRANCH: SM7 0xFFFFFFFF 0x00000000 == RT0	; Round == 0?
+TEST_SM_AND_BRANCH: SM7 0xFFFFFFFF 0x00000001 == RT1	; Round == 1?
+TEST_SM_AND_BRANCH: SM7 0xFFFFFFFF 0x00000002 == RT2	; Round == 2?
+TEST_SM_AND_BRANCH: SM7 0xFFFFFFFF 0x00000003 == RT3	; Round == 3?
+TEST_SM_AND_BRANCH: SM7 0xFFFFFFFF 0x00000004 == RT4	; Round == 4?
+TEST_SM_AND_BRANCH: SM7 0xFFFFFFFF 0x00000005 == RT5	; Round == 5?
+BRANCH: RT6				; Round == 6
+;============= end of mvebu_dram_dll_search() =============
+;
+;
+;************************************************
+;************ mvebu_dram_dll_tune() *************
+;************************************************
+; SM11 - DLL PH POS original
+; SM12 - DLL PH NEG original
+; SM13 - regval
+;************************************************
+LABEL: DTUN
+; Read the original DLL phase values and keep them in SM11 and SM12
+LOAD_SM_ADDR: SM11 0xC0001050		; SM11 <= MC6_CH0_PHY_DLL_CONTROL_B0
+MOV_SM_SM: SM12 SM11			; SM12 = SM11
+RSHIFT_SM_VAL: SM11 0x00000010		; DLL_PHASE_POS_SHIFT = 16
+AND_SM_VAL: SM11 0x0000003F		; &= DLL_PHASE_SZ_MASK
+RSHIFT_SM_VAL: SM12 0x00000018		; DLL_PHASE_NEG_SHIFT = 24
+AND_SM_VAL: SM12 0x0000003F		; &= DLL_PHASE_SZ_MASK
+;
+;
+WRITE: 0xC0001020 0x00000000		; 0 => MC6_CH0_PHY_CONTROL_9
+;
+; Automatically update PHY DLL with interval time set in Dll_auto_update_interval
+; ([15:8] of PHY Control Register 13, Offset 0x248)
+LOAD_SM_ADDR: SM13 0xC000101C		; regval <= MC6_CH0_PHY_CONTROL_8
+;
+; Turn off Dll_auto_manual_update & Dll_auto_update_en
+; DLL_auto_update_en has a known bug. Don't use.
+AND_SM_VAL: SM13 0xFFFFFFF3		; regval &= ~(DLL_AUTO_UPDATE_EN | DLL_AUTO_MANUAL_UPDATE)
+;
+; change Dll_reset_timer to 128*32 cycles
+OR_SM_VAL: SM13 0x80000000		; regval |= DLL_RESET_TIMER(DLL_RST_TIMER_VAL);
+STORE_SM_ADDR: SM13 0xC000101C		; regval => MC6_CH0_PHY_CONTROL_8
+;
+; Configure DMA engine, which will be used in mvebu_dram_dll_wr_test
+BRANCH: DMAI				; Call mvebu_dram_dll_dma_eng_init()
+LABEL: DMAF				;
+;*****************ROUND-0******************
+LOAD_SM_VAL: SM6 0x00000000		; dll = 0
+LOAD_SM_VAL: SM7 0x00000000		; Start round 0
+BRANCH: SRCH				; Call mvebu_dram_dll_search()
+;
+LABEL: RT0				; Return from round 0 search. dll_median is in SM6
+TEST_SM_AND_BRANCH: SM6 0x0000FFFF 0x000FFFF == FAIL	; Failed to find median, restore original
+MOV_SM_SM: SM14 SM6			; save dll_median to SM14
+;
+;*****************ROUND-1******************
+LOAD_SM_VAL: SM7 0x00000001		; Start round 1, dll = dll_median
+BRANCH: SRCH				; Call mvebu_dram_dll_search()
+;
+LABEL: RT1				; Return from round 1 search. dll_phsel1 is in SM6
+TEST_SM_AND_BRANCH: SM6 0x0000FFFF 0x000FFFF == FAIL	; Failed to find NEG phase, restore original
+;
+;*****************ROUND-2******************
+LOAD_SM_VAL: SM7 0x00000002		; Start round 2, dll = dll_phsel1
+BRANCH: SRCH				; Call mvebu_dram_dll_search()
+;
+LABEL: RT2				; Return from round 2 search. dll_phsel is in SM6
+TEST_SM_AND_BRANCH: SM6 0x0000FFFF 0x000FFFF == FAIL	; Failed to find POS phase, restore original
+;
+;
+;*****************ROUND-3******************
+LOAD_SM_VAL: SM7 0x00000003		; Start round 3, dll = dll_median
+BRANCH: SRCH				; Call mvebu_dram_dll_search()
+;
+LABEL: RT3				; Return from round 3 search. dll_phsel1 is in SM6
+TEST_SM_AND_BRANCH: SM6 0x0000FFFF 0x000FFFF == FAIL	; Failed to find NEG phase, restore original
+;
+;*****************ROUND-4******************
+LOAD_SM_VAL: SM7 0x00000004		; Start round 4, dll = dll_phsel1
+BRANCH: SRCH				; Call mvebu_dram_dll_search()
+;
+LABEL: RT4				; Return from round 4 search. dll_phsel is in SM6
+TEST_SM_AND_BRANCH: SM6 0x0000FFFF 0x000FFFF == FINA	; ; Failed to find NEG phase, restore original
+
+;*****************ROUND-5******************
+LOAD_SM_VAL: SM7 0x00000005		; Start round 5, dll = dll_median
+BRANCH: SRCH				; Call mvebu_dram_dll_search()
+;
+LABEL: RT5				; Return from round 5 search. dll_phsel1 is in SM6
+TEST_SM_AND_BRANCH: SM6 0x0000FFFF 0x000FFFF == FAIL	; Failed to find NEG phase, restore original
+;
+;*****************ROUND-6******************
+LOAD_SM_VAL: SM7 0x00000006		; Start round 6, dll = dll_phsel1
+BRANCH: SRCH				; Call mvebu_dram_dll_search()
+;
+LABEL: RT6				; Return from round 6 search. dll_phsel is in SM6
+TEST_SM_AND_BRANCH: SM6 0x0000FFFF 0x000FFFF != FINA	; Succeeded, exit
+;
+LABEL: FAIL				; Restore original DLL phase values
+MOV_SM_SM: SM0 SM11			; SM0 = DLL PH POS
+MOV_SM_SM: SM1 SM12			; SM1 = DLL PH NEG
+;
+LOAD_SM_VAL: SM2 0x00000000		; Request return to FINB
+BRANCH: DSET				; Call mvebu_dram_dll_set()
+;
+LABEL: FINB
+;
+;
+LABEL: FINA
+
+; save parameter to 0xC001404C for warm reset usage
+LOAD_SM_ADDR: SM4 0xC0001050		; MC6_CH0_PHY_DLL_CONTROL_B0
+RSHIFT_SM_VAL: SM4 0x00000010
+MOV_SM_SM: SM0 SM4
+AND_SM_VAL: SM0 0x0000003F
+LSHIFT_SM_VAL: SM0 0x00000008
+
+RSHIFT_SM_VAL: SM4 0x00000008
+MOV_SM_SM: SM1 SM4
+AND_SM_VAL: SM1 0x0000003F
+LSHIFT_SM_VAL: SM1 0x0000000E
+
+LOAD_SM_ADDR: SM4 0xC0001054		; MC6_CH0_PHY_DLL_CONTROL_B1
+RSHIFT_SM_VAL: SM4 0x00000010
+MOV_SM_SM: SM2 SM4
+AND_SM_VAL: SM2 0x0000003F
+LSHIFT_SM_VAL: SM2 0x000000014
+
+RSHIFT_SM_VAL: SM4 0x00000008
+MOV_SM_SM: SM3 SM4
+AND_SM_VAL: SM3 0x0000003F
+LSHIFT_SM_VAL: SM3 0x00000001A
+
+OR_SM_SM: SM3 SM0
+OR_SM_SM: SM3 SM1
+OR_SM_SM: SM3 SM2
+LOAD_SM_ADDR: SM0 0xC001404C		; save to 0xC001404C
+AND_SM_VAL: SM0 0x000000FF
+OR_SM_SM: SM3 SM0
+STORE_SM_ADDR: SM3 0xC001404C
+
+LOAD_SM_ADDR: SM4 0xC0001074		; MC6_CH0_PHY_DLL_CONTROL_ADCM
+RSHIFT_SM_VAL: SM4 0x00000010
+MOV_SM_SM: SM2 SM4
+AND_SM_VAL: SM2 0x0000003F
+LSHIFT_SM_VAL: SM2 0x000000014
+
+RSHIFT_SM_VAL: SM4 0x00000008
+MOV_SM_SM: SM3 SM4
+AND_SM_VAL: SM3 0x0000003F
+LSHIFT_SM_VAL: SM3 0x00000001A
+
+OR_SM_SM: SM3 SM2
+LOAD_SM_ADDR: SM0 0xC0014050		; save to 0xC0014050
+AND_SM_VAL: SM0 0x000FFFFF
+OR_SM_SM: SM3 SM0
+STORE_SM_ADDR: SM3 0xC0014050
+
+LABEL: FINC
+;
+;
+END:					; This is the END!
+;============= end of mvebu_dram_dll_tune() =============
+End Instructions:
+End DDR Initialization:
+End Extended Reserved Data:
+
